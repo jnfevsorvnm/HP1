@@ -374,7 +374,7 @@ client.on('message', message => {
 var prefix = ".";
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-if(!message.member.hasPermission('MANAGE_GUILD')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `MANAGE_GUILD`' );
+if(!message.member.hasPermission('BAN_MEMBERS'))   return message.reply("**هذة الأمر للأدارة فقط**");
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 let copy = "Test";
 let request = `Requested By ${message.author.username}`;
@@ -434,7 +434,7 @@ client.on("message", message => {
 client.on('message', message => {
     if (message.content.split(' ')[0] == '.bc2')
        message.guild.members.forEach( member => {
-         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+         if (!message.member.hasPermission("BAN_MEMBERS"))return   return message.reply("**هذة الأمر للأدارة فقط**");
 
 
            member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.content.substr(3));
@@ -473,7 +473,7 @@ client.on('message', message => {
 client.on("message", message => {
     var prefix = ".";
    if (message.content.startsWith(prefix + "bc3")) {
-                if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+                if (!message.member.hasPermission("BAN_MEMBERS"))  return message.reply("**هذة الأمر للأدارة فقط**");
 let args = message.content.split(" ").slice(1);
 var argresult = args.join(' '); 
 message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
