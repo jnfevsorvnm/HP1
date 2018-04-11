@@ -60,7 +60,7 @@ kboosh.on("messageCreate", (msg) => {
 }, 1);
     }
 });
-kboosh.connect(process.env.BOT_TOKEN)
+kboosh.connect(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
