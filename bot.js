@@ -1,55 +1,18 @@
 const Discord = require("discord.js");
-const client = new Discord.Client({ fetchAllMembers: true });
+const client = new Discord.Client();
 const moment = require('moment');
 
-var dat = JSON.parse("{}");
-function forEachObject(obj, func) {
-    Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
-}
-
-
-client.on("ready", () => {
-    var guild;
-    while (!guild)
-        guild = client.guilds.find("name", "!!")
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            dat[Inv] = Invite.uses;
-        })
-    })
-})
-client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', 'chat');
-    if (!channel) {
-        console.log("!channel fails");
-        return;
-    }
-    if (member.id == client.user.id) {
-        return;
-    }
-    console.log('made it till here!');
-    var guild;
-    while (!guild)
-        guild = client.guilds.find("name", "!!")
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            if (dat[Inv])
-                if (dat[Inv] < Invite.uses) {
-                    console.log(3);
-                    console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
- channel.send(`تم دعوته من قبل  ${Invite.inviter}`)            
- }
-            dat[Inv] = Invite.uses;
-        })
-    })
-});
-client.on('message', msg => {
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+  });
+  
+  client.on('message', msg => {
     if (msg.content === 'ping') {
       msg.reply('Pong!');
     }
   });
+
+
 
   client.on('ready',  () => {
     console.log('تم تشغيل :dragon  ');
@@ -63,13 +26,16 @@ client.on('message', msg => {
 
 });
 
+
+
+
 client.on('message', message => {
-    var prefix = ".";
+    var prefix = "+";
     
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
       var argresult = args.join(' ');
-      if (message.author.id == 234454368072630283) return;
+      if (message.author.id == 410835593451405312) return;
     
     
     if (message.content.startsWith(prefix + 'playing')) {
@@ -204,7 +170,7 @@ client.on('message', message => {
        
       });
     client.on('message', message => {
-        const prefix = "."
+        var prefix = ".";
         var args = message.content.split(" ").slice(1);    
         if(message.content.startsWith(prefix + 'id')) {
             if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
@@ -347,8 +313,8 @@ client.on('message', message => {
     var prefix = "ا";
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix +"مسح")) {
-                if (!message.member.hasPermission("MANAGE_MESSAGES"))  return message.reply("**للأسف ليس لديك صلاحية `MANAGE_MESSAGES` Permission**");
-if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("**للأسف البوت يحتاج صلاحية`MANAGE_MESSAGES`**");
+                if (!message.member.hasPermission("MANAGE_CHANNELS"))  return message.reply("**للأسف ليس لديك صلاحية `MANAGE_CHANNELS` Permission**");
+if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**للأسف البوت يحتاج صلاحية`MANAGE_CHANNELS`**");
  if (!args[1]) {
                                 let embed3 = new Discord.RichEmbed()
                                 .setDescription("امسح <number>")
@@ -413,7 +379,7 @@ msg.delete();
 }
 });
 client.on("message", message => {
-    const prefix = "."
+    var prefix = ".";
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -483,6 +449,5 @@ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !=
 message.delete(); 
 };     
 });
-
 
 client.login(process.env.BOT_TOKEN);
