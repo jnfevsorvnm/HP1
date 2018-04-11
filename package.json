@@ -1,0 +1,38 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "2.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node hp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/then/fs.git"
+  },
+  "keywords": [
+    "promise",
+    "then",
+    "fs",
+    "core"
+  ],
+  "author": "Nathan Zadoks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/then/fs/issues"
+  },
+  "devDependencies": {
+    "bash-color": "0.0.3"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "moment": "2.21.0",
+    "giphy-api": "1.2.7",
+    "eris": "0.8.5",
+    "dateformat": "3.0.3",
+    "canvas": "1.6.10",
+    "jimp": "0.2.28",
+    "request": "2.81.0"
+  }
+
+}
