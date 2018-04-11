@@ -59,17 +59,17 @@ client.on('message', msg => {
   });
 
   client.on('ready', () => {
-    client.user.setActivity("Server Programming",{type: 'WATCHING'});
+    client.user.setActivity("HP FOR EVER",{type: 'WATCHING'});
 
 });
 
 client.on('message', message => {
-    var prefix = "+";
+    var prefix = ".";
     
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
       var argresult = args.join(' ');
-      if (message.author.id == 410835593451405312) return;
+      if (message.author.id == 234454368072630283) return;
     
     
     if (message.content.startsWith(prefix + 'playing')) {
@@ -204,7 +204,7 @@ client.on('message', message => {
        
       });
     client.on('message', message => {
-        const prefix = "+"
+        const prefix = "."
         var args = message.content.split(" ").slice(1);    
         if(message.content.startsWith(prefix + 'id')) {
             if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
@@ -344,14 +344,14 @@ client.on('message', message => {
     
 
   client.on("message", message => {
-    var prefix = ".";
+    var prefix = "ا";
             var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix +"clear")) {
-                if (!message.member.hasPermission("MANAGE_CHANNELS"))  return message.reply("**للأسف ليس لديك صلاحية `MANAGE_CHANNELS` Permission**");
-if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**للأسف البوت يحتاج صلاحية`MANAGE_CHANNELS`**");
+            if (message.content.startsWith(prefix +"مسح")) {
+                if (!message.member.hasPermission("MANAGE_MESSAGES"))  return message.reply("**للأسف ليس لديك صلاحية `MANAGE_MESSAGES` Permission**");
+if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("**للأسف البوت يحتاج صلاحية`MANAGE_MESSAGES`**");
  if (!args[1]) {
                                 let embed3 = new Discord.RichEmbed()
-                                .setDescription("clear <number>")
+                                .setDescription("امسح <number>")
                                 .setColor("RANDOM")
                                 message.channel.sendEmbed(embed3);
                             } else {
