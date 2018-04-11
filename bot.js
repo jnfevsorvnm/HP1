@@ -22,10 +22,6 @@ client.on('ready', () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
 
-  client.on('ready', () => {
-    client.user.setActivity("HP FOR EVER",{type: 'WATCHING'});
-
-});
 
 
 
