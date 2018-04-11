@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "main": "bot.js",
   "scripts": {
-    "start": "node hp.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
