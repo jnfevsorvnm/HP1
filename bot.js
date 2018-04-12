@@ -5,6 +5,65 @@ const fs = require("fs");
 const sql = require("sqlite");
 sql.open("./score.sqlite");
 
+rebel.on("message", message => {
+  if (message.author.bot) return;
+  if (message.channel.type !== "text") return;
+
+  sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+    if (!row) {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 2, 0]);
+    } else {
+      let curLevel = Math.floor(0.2 * Math.sqrt(row.points + 4));
+      if (curLevel > row.level) {
+        row.level = curLevel;
+        sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
+        message.channel.send(`<@!${message.author.id}> مبروك لفل   ${curLevel}! `);
+      }
+      sql.run(`UPDATE scores SET points = ${row.points + 2} WHERE userId = ${message.author.id}`);
+    }
+  }).catch(() => {
+    console.error;
+    sql.run("CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)").then(() => {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 4, 4]);
+    });
+  });
+var prefix = ".";
+  if (!message.content.startsWith(prefix)) return;
+  if (message.content.startsWith(prefix + "لفل")) {
+    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+      if (!row) return message.reply("Your current level is 0");
+      message.reply(`**لـفلك الحالي هـو ${row.level}**`);
+    });
+  } 
+  if (message.content.startsWith(prefix + "SOoOn")) {
+    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+      if (!row) return message.reply("Your current level is 0");
+       const yuki = new Discord.RichEmbed()
+  .setAuthor(`Rank`)
+  .setColor("RANDOM")
+  .setTimestamp()
+  .addField("**لفلك:**",`${row.level}`)
+  .addField("**ترتيبك عالسيرفر:**",`${row.points}`)
+  message.channel.sendEmbed(yuki);
+  });
+  } 
+  
+    });
+    rebel.pointsMonitor = (dateformat, message) => {
+  if (message.channel.type !=='text') return;
+  const settings = rebel.settings.get(message.guild.id);
+  if (message.content.startsWith(settings.prefix)) return;
+  const score = rebel.points.get(message.author.id) || { points: 2, level: 2 };
+  score.points++;
+  const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
+  if (score.level < curLevel) {
+        message.channel.send(`<@!${message.author.id}> مبروك لفل   ${curLevel}! `);
+    score.level = curLevel;
+  }
+  rebel.points.set(message.author.id, score);
+};
+});
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
   });
