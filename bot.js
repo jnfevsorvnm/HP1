@@ -132,7 +132,8 @@ client.on('message', message => {
 
 
 client.on("message", message => {
-if (message.content === (".h")) {
+    var prefix = ".";
+if (message.content === ("member")) {
 let channel = message.client.channels.find('name', "member");
 let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'member');
 if (!muteRole) return message.reply("**ليس هناك روم بأسم member**").catch(console.error);
@@ -144,7 +145,8 @@ message.channel.sendMessage("تم تفعيل الروم بنجاح")
   }
 });
 client.on("message", message => {
-    if (message.content === (".d")) {
+    var prefix = ".";
+    if (message.content === ("date")) {
           let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'date');
   if (!muteRole) return message.reply("**ليس هناك روم بأسم date**").catch(console.error);
            
