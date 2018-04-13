@@ -91,11 +91,11 @@ client.on('ready', ()=>{
         client.user.setGame(`Hp Clan `, 'https://www.twitch.tv/hpclan')
     }, 50000);
 });
-bot.on('ready', ()=>{
+client.on('ready', ()=>{
     setInterval(function(){
-        bot.editChannel("380710181824364555", {name : `🏆  Servers [${client.guilds.size}]`})
-        bot.editChannel("380715276595101696", {name : `🏓 Channels [${client.channels.size}]`})
-        bot.editChannel("434160539946582016", {name : `👥 Users [${client.users.size}]`})
+        client.editChannel("380710181824364555", {name : `🏆  Servers [${client.guilds.size}]`})
+        client.editChannel("380715276595101696", {name : `🏓 Channels [${client.channels.size}]`})
+        client.editChannel("434160539946582016", {name : `👥 Users [${client.users.size}]`})
             var currentTime = new Date(),
             hours = currentTime.getHours() - 1 ,
             minutes = currentTime.getMinutes(),
@@ -112,18 +112,18 @@ bot.on('ready', ()=>{
             if (hours == 0) {
                 hours = 12;
             }
-            bot.editChannel("434160596049592333", {name : `🕐 Time [${hours + ":" + minutes + " " + suffix}]`})
-            bot.editChannel("434161008240754710", {name : `Welcome To`});
-            bot.editChannel("434161008240754710", {name : `Welcome To H`});
-            bot.editChannel("434161008240754710", {name : `Welcome To HP`});
-            bot.editChannel("434161008240754710", {name : `Welcome To HP C`});
-            bot.editChannel("434161008240754710", {name : `Welcome To HP CL`});
-            bot.editChannel("434161008240754710", {name : `Welcome To HP CLA`});
-            bot.editChannel("434161008240754710", {name : `Welcome To HP CLAN`});
-            bot.editChannel("434161008240754710", {name : `Welcome To HP CLAN⭐`});
+            client.editChannel("434160596049592333", {name : `🕐 Time [${hours + ":" + minutes + " " + suffix}]`})
+            client.editChannel("434161008240754710", {name : `Welcome To`});
+            client.editChannel("434161008240754710", {name : `Welcome To H`});
+            client.editChannel("434161008240754710", {name : `Welcome To HP`});
+            client.editChannel("434161008240754710", {name : `Welcome To HP C`});
+            client.editChannel("434161008240754710", {name : `Welcome To HP CL`});
+            client.editChannel("434161008240754710", {name : `Welcome To HP CLA`});
+            client.editChannel("434161008240754710", {name : `Welcome To HP CLAN`});
+            client.editChannel("434161008240754710", {name : `Welcome To HP CLAN⭐`});
     }, 6000);
 })
-bot.connect()
+client.connect()
 
 client.on('message', message => {
     var prefix = ".";
