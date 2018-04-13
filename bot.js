@@ -1093,7 +1093,7 @@ if (message.content === x10) {
 	}
   if (message.content === 'الوان') {
       if (!message.channel.guild) return;
-    message.channel.sendFile('https://media.discordapp.net/attachments/378292626601934848/434149743959080962/colors.png?width=450&height=117');
+    message.channel.sendFile('https://i.imgur.com/4HlgiWE.png');
   }
 	
 });
