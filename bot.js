@@ -1091,7 +1091,7 @@ if (message.content === x10) {
    .setDescription(`تم تغير اللون بنجاح`)
   message.channel.sendEmbed(embed);
 	}
-  if (message.content === '.colors') {
+  if (message.content === 'الوان') {
       if (!message.channel.guild) return;
     message.channel.sendFile('https://media.discordapp.net/attachments/378292626601934848/434149743959080962/colors.png?width=450&height=117');
   }
