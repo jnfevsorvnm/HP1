@@ -83,8 +83,47 @@ client.on('ready', () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
 
+const Eris = require("eris");
 
+const bot = new Eris(process.env.BOT_TOKEN);
+client.on('ready', ()=>{
+    setInterval(function(){
+        client.user.setGame(`Hp Clan `, 'https://www.twitch.tv/hpclan')
+    }, 50000);
+});
+bot.on('ready', ()=>{
+    setInterval(function(){
+        bot.editChannel("380710181824364555", {name : `🏆  Servers [${client.guilds.size}]`})
+        bot.editChannel("380715276595101696", {name : `🏓 Channels [${client.channels.size}]`})
+        bot.editChannel("434160539946582016", {name : `👥 Users [${client.users.size}]`})
+            var currentTime = new Date(),
+            hours = currentTime.getHours() - 1 ,
+            minutes = currentTime.getMinutes(),
+            seconds = currentTime.getSeconds();
 
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            var suffix = "AM";
+            if (hours >= 12) {
+                suffix = "PM";
+                hours = hours - 12;
+            }
+            if (hours == 0) {
+                hours = 12;
+            }
+            bot.editChannel("434160596049592333", {name : `🕐 Time [${hours + ":" + minutes + " " + suffix}]`})
+            bot.editChannel("434161008240754710", {name : `Welcome To`});
+            bot.editChannel("434161008240754710", {name : `Welcome To H`});
+            bot.editChannel("434161008240754710", {name : `Welcome To HP`});
+            bot.editChannel("434161008240754710", {name : `Welcome To HP C`});
+            bot.editChannel("434161008240754710", {name : `Welcome To HP CL`});
+            bot.editChannel("434161008240754710", {name : `Welcome To HP CLA`});
+            bot.editChannel("434161008240754710", {name : `Welcome To HP CLAN`});
+            bot.editChannel("434161008240754710", {name : `Welcome To HP CLAN⭐`});
+    }, 6000);
+})
+bot.connect()
 
 client.on('message', message => {
     var prefix = ".";
@@ -131,37 +170,6 @@ client.on('message', message => {
      });
 
 
-client.on("message", message => {
-if (message.content === ("H-member")) {
-let channel = message.client.channels.find('name', "member");
-let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'member');
-if (!muteRole) return message.reply("**ليس هناك روم بأسم member**").catch(console.error);
-if(!message.channel.guild) return message.reply('**Commands in the server**');
-if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-channel.edit({name : `Members「${message.guild.memberCount}」`});
-message.channel.sendMessage("تم تفعيل الروم بنجاح")
-      
-  }
-});
-client.on("message", message => {
-    if (message.content === ("H-date")) {
-          let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'date');
-  if (!muteRole) return message.reply("**ليس هناك روم بأسم date**").catch(console.error);
-           
-                   if(!message.channel.guild) return message.reply('**Commands in the server**');
-	        if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-            
-          let channel = message.client.channels.find('name', "date");
-              var currentTime = new Date(),
-            years = currentTime.getFullYear(),
-            month = currentTime.getMonth() + 1,
-            day = currentTime.getDate(),
-            week = currentTime.getDay();
-   
-    channel.edit({name : "📅 - Date " + "「" + day + "-" + month + "-" + years + "」"});
-message.channel.sendMessage("تم تفعيل الروم بنجاح");
-}
-});
 
   client.on('message', message => {
     if (message.content === ".server") {
