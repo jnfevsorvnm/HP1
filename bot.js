@@ -69,7 +69,8 @@ client.on('message', message => {
 
 
   client.on('message', message => {
-    if (message.content === "!ّserver") {
+    var prefix = "+";
+    if (message.content === "server") {
         if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
     if(!message.channel.guild) return;
     const millis = new Date().getTime() - message.guild.createdAt.getTime();
@@ -187,7 +188,7 @@ client.on('message', function(message) {
        
       });
     client.on('message', message => {
-        var prefix = "!";
+         var prefix = "+";
         var args = message.content.split(" ").slice(1);    
         if(message.content.startsWith(prefix + 'id')) {
             if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
