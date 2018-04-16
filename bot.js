@@ -438,7 +438,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
     }
     });
 client.on("message", message => {
-    var prefix = "!";
+    var prefix = "+";
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -457,7 +457,7 @@ client.on("message", message => {
   });
 
 client.on('message', message => {
-    if (message.content.split(' ')[0] == '!bc2')
+    if (message.content.split(' ')[0] == '+bc2')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))return   return message.reply("**هذة الأمر للأدارة فقط**");
 
@@ -496,7 +496,7 @@ client.on('message', message => {
 });
 
 client.on("message", message => {
-    var prefix = "!";
+    var prefix = "+";
    if (message.content.startsWith(prefix + "bc3")) {
                 if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
 let args = message.content.split(" ").slice(1);
