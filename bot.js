@@ -22,48 +22,6 @@ client.on('ready', () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
 
-const Eris = require("eris");
-
-const bot = new Eris(process.env.BOT_TOKEN);
-client.on('ready', ()=>{
-    setInterval(function(){
-        client.user.setGame(`Hp Clan `, 'https://www.twitch.tv/hpclan')
-    }, 50000);
-});
-client.on('ready', ()=>{
-    setInterval(function(){
-        client.editChannel("380710181824364555", {name : `🏆  Servers [${client.guilds.size}]`})
-        client.editChannel("380715276595101696", {name : `🏓 Channels [${client.channels.size}]`})
-        client.editChannel("434160539946582016", {name : `👥 Users [${client.users.size}]`})
-            var currentTime = new Date(),
-            hours = currentTime.getHours() - 1 ,
-            minutes = currentTime.getMinutes(),
-            seconds = currentTime.getSeconds();
-
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            var suffix = "AM";
-            if (hours >= 12) {
-                suffix = "PM";
-                hours = hours - 12;
-            }
-            if (hours == 0) {
-                hours = 12;
-            }
-            client.editChannel("434160596049592333", {name : `🕐 Time [${hours + ":" + minutes + " " + suffix}]`})
-            client.editChannel("434161008240754710", {name : `Welcome To`});
-            client.editChannel("434161008240754710", {name : `Welcome To H`});
-            client.editChannel("434161008240754710", {name : `Welcome To HP`});
-            client.editChannel("434161008240754710", {name : `Welcome To HP C`});
-            client.editChannel("434161008240754710", {name : `Welcome To HP CL`});
-            client.editChannel("434161008240754710", {name : `Welcome To HP CLA`});
-            client.editChannel("434161008240754710", {name : `Welcome To HP CLAN`});
-            client.editChannel("434161008240754710", {name : `Welcome To HP CLAN⭐`});
-    }, 6000);
-})
-client.connect()
-
 client.on('message', message => {
     var prefix = ".";
     
