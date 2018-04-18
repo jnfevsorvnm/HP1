@@ -132,7 +132,8 @@ client.on('message', message => {
       });
 
 client.on('message', msg => {
-  if (msg.content === '.inviter') {
+    var prefix = ".";
+  if (msg.content === 'inviter') {
           msg.guild.fetchInvites()
    .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`))
   }
