@@ -132,8 +132,7 @@ client.on('message', message => {
       });
 
 client.on('message', msg => {
-    var prefix = "!";
-  if (msg.content === 'inviter') {
+  if (msg.content === '!inviter') {
           msg.guild.fetchInvites()
    .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`))
   }
@@ -210,6 +209,7 @@ client.on('message', msg => {
         .addField('🤖| نوع حسابك:',"**"+ w + "**",true)    
         .addField('📛| الكود حق حسابك:',"**#" +  `${z.discriminator}**`,true)
         .addField('**التاريح الذي انشئ فيه حسابك | 📆 **: ' ,year + "-"+ month +"-"+ day)    
+        .addField('**عدد الأعضاء التي تمت دعوتهم برابطك | **: ' ${invites.find(invite => invite.inviter.id === msg.author.id).uses)    
         .addField("**تاريخ دخولك للسيرفر| ⌚   :**", message.member.joinedAt.toLocaleString())    
         
         .addField('**⌚ | تاريخ انشاء حسابك الكامل:**', message.author.createdAt.toLocaleString())
