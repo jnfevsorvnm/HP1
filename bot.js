@@ -68,7 +68,8 @@ client.on('message', message => {
      });
 
   client.on('message', message => {
-    if (message.content === "+server") {
+        var prefix = "+";
+    if (message.content === "server") {
         if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
     if(!message.channel.guild) return;
     const millis = new Date().getTime() - message.guild.createdAt.getTime();
@@ -400,7 +401,8 @@ client.on("message", message => {
   });
 
 client.on('message', message => {
-    if (message.content.split(' ')[0] == '+bc2')
+        var prefix = "+";
+    if (message.content.split(' ')[0] == 'bc2')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 
