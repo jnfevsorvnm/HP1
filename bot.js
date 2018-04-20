@@ -6,7 +6,7 @@ const arraySort = require('array-sort'),
       table = require('table');
 
 client.on('message' , async (message) => {
-    if(message.content.startsWith(prefix + "دعوات")) {
+    if(message.content.startsWith(prefix + ".topinv")) {
 
   let invites = await message.guild.fetchInvites();
 
@@ -316,8 +316,7 @@ client.on('message', msg => {
         .addField('🤖| نوع حسابك:',"**"+ w + "**",true)    
         .addField('📛| الكود حق حسابك:',"**#" +  `${z.discriminator}**`,true)
         .addField('**التاريح الذي انشئ فيه حسابك | 📆 **: ' ,year + "-"+ month +"-"+ day)   
-        .addField("**تاريخ دخولك للسيرفر| ⌚   :**", message.member.joinedAt.toLocaleString())    
-        .addField('🔢| عدد دعواتك:', "**"+ `${invites.find(invite => invite.inviter.id === msg.author.id).uses}` +"**",true)
+        .addField("**تاريخ دخولك للسيرفر| ⌚   :**", message.member.joinedAt.toLocaleString())   
         .addField('**⌚ | تاريخ انشاء حسابك الكامل:**', message.author.createdAt.toLocaleString())
         .addField("**اخر رسالة لك | 💬  :**", message.author.lastMessage)            
         
