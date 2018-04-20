@@ -5,7 +5,6 @@ const arraySort = require('array-sort'),
       table = require('table');
 
 client.on('message' , async (message) => {
-    var prefix = ".";
     if(message.content.startsWith(prefix + "دعوات")) {
 
   let invites = await message.guild.fetchInvites();
