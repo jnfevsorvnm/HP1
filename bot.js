@@ -303,8 +303,7 @@ client.on('message', msg => {
         .addField('♨| Playing:','**'+y+'**' , true)
         .addField('🤖| نوع حسابك:',"**"+ w + "**",true)    
         .addField('📛| الكود حق حسابك:',"**#" +  `${z.discriminator}**`,true)
-        .addField('**التاريح الذي انشئ فيه حسابك | 📆 **: ' ,year + "-"+ month +"-"+ day)    
-        .addField('**عدد الأعضاء التي تمت دعوتهم برابطك | **: ${Invite.inviter})  
+        .addField('**التاريح الذي انشئ فيه حسابك | 📆 **: ' ,year + "-"+ month +"-"+ day)   
         .addField("**تاريخ دخولك للسيرفر| ⌚   :**", message.member.joinedAt.toLocaleString())    
         
         .addField('**⌚ | تاريخ انشاء حسابك الكامل:**', message.author.createdAt.toLocaleString())
