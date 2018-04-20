@@ -84,7 +84,6 @@ client.on('message', msg => {
      });
     }
 });
-
 var dat = JSON.parse("{}");
 function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
@@ -120,9 +119,9 @@ client.on("guildMemberAdd", (member) => {
                 if (dat[Inv] < Invite.uses) {
                     console.log(3);
                     console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
- channel.send(`  **نشكر الي دعاك لسيرفرنا ${Invite.inviter} :hearts: 
- رابط الدعوة --> https://discord.gg/${Invite.code} :link: 
- عضو رقم --> ${member.guild.memberCount} :dizzy:  **`)            
+ channel.send(` :hearts: **تم دعوته من قبل ${Invite.inviter} :hearts: 
+:hearts: رابط الدعوه --> https://discord.gg/${Invite.code} :hearts:
+:hearts: عضو رقم --> ${member.guild.memberCount} :hearts: **`)            
  }
             dat[Inv] = Invite.uses;
         })
