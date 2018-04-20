@@ -428,7 +428,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
                             message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
                             let embed4 = new Discord.RichEmbed()
                                                             .setColor("#008000")
-                                .setDescription(":white_check_mark: | Delete " + args[1] + " Message! by + message.author.tag")
+                                .setDescription(":white_check_mark: | Delete " + args[1] + " Message! by `**<@` + `${z.id}` + `>**`, true)
                                                                                         message.delete("2000");
                                 message.channel.sendEmbed(embed4) .then(msg => msg.delete(2000));
                             }
