@@ -118,7 +118,7 @@ client.on("guildMemberAdd", (member) => {
 
 
 client.on('message', message => {
-    var prefix = "+";
+    var prefix = ".";
     
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
@@ -162,7 +162,7 @@ client.on('message', message => {
      });
 
   client.on('message', message => {
-        var prefix = "+";
+        var prefix = ".";
     if (message.content === "server") {
         if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
     if(!message.channel.guild) return;
@@ -227,7 +227,7 @@ client.on('message', message => {
       });
 
 client.on('message', msg => {
-  if (msg.content === '+inviter') {
+  if (msg.content === '.inviter') {
           msg.guild.fetchInvites()
    .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`))
   }
@@ -266,7 +266,7 @@ client.on('message', msg => {
        
       });
     client.on('message', message => {
-        var prefix = "+";
+        var prefix = ".";
         var args = message.content.split(" ").slice(1);    
         if(message.content.startsWith(prefix + 'id')) {
             if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
@@ -346,7 +346,7 @@ client.on('message', msg => {
         }
     }); 
     client.on('message', message => {
-        if (message.content.startsWith("+avatar")) {
+        if (message.content.startsWith(".avatar")) {
             var mentionned = message.mentions.users.first();
         var x5bzm;
           if(mentionned){
@@ -434,7 +434,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
 
 client.on('message', message => {
     if(!message.channel.guild) return;
-var prefix = "+";
+var prefix = ".";
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('MANAGE_SERVER')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `MANAGE_SERVER`' );
@@ -476,7 +476,7 @@ msg.delete();
 }
 });
 client.on("message", message => {
-    var prefix = "+";
+    var prefix = ".";
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -495,7 +495,7 @@ client.on("message", message => {
   });
 
 client.on('message', message => {
-        var prefix = "+";
+        var prefix = ".";
     if (message.content.split(' ')[0] == 'bc2')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
@@ -535,7 +535,7 @@ client.on('message', message => {
 });
 
 client.on("message", message => {
-    var prefix = "+";
+    var prefix = ".";
    if (message.content.startsWith(prefix + "bc3")) {
                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 let args = message.content.split(" ").slice(1);
