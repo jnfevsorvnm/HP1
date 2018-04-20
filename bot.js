@@ -6,7 +6,6 @@ const arraySort = require('array-sort'),
       table = require('table');
 
 client.on('message' , async (message) => {
-    var prefix = ".";
     if(message.content.startsWith(prefix + "دعوات")) {
 
   let invites = await message.guild.fetchInvites();
@@ -38,7 +37,12 @@ client.on('ready', () => {
     }
   });
 
-
+client.on('message', msg => {
+    if (msg.content === '.inviter') {
+            msg.guild.fetchInvites()
+     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`))
+    }
+  });
 
   client.on('ready',  () => {
     console.log('تم تشغيل :dragon  ');
