@@ -6,6 +6,7 @@ const arraySort = require('array-sort'),
       table = require('table');
 
 client.on('message' , async (message) => {
+    var prefix = ".";
     if(message.content.startsWith(prefix + "دعوات")) {
 
   let invites = await message.guild.fetchInvites();
@@ -46,17 +47,7 @@ client.on('ready', () => {
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
   });
 
-client.on("ready", () => {
-    var guild;
-    while (!guild)
-        guild = client.guilds.get("307979183034990603");
-    guild.fetchInvites().then((data) => {
-        data.forEach((Invite, key, map) => {
-            var Inv = Invite.code;
-            dat[Inv] = Invite.uses;
-        });
-    });
-});
+
  
  client.on("message", message => {
     var prefix = ".";
@@ -89,33 +80,50 @@ client.on("ready", () => {
      });
     }
 });
- 
+
+var dat = JSON.parse("{}");
+function forEachObject(obj, func) {
+    Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
+}
+client.on("ready", () => {
+    var guild;
+    while (!guild)
+        guild = client.guilds.find("name", "HP ( Horrifying Players )")
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
+            var Inv = Invite.code;
+            dat[Inv] = Invite.uses;
+        })
+    })
+})
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("387310053809586176");
+    let channel = member.guild.channels.find('name', 'chat');
     if (!channel) {
-        console.log("!the channel id it's not correct");
+        console.log("!channel fails");
         return;
     }
     if (member.id == client.user.id) {
         return;
     }
-    console.log('-');
+    console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.get("307979183034990603");
+        guild = client.guilds.find("name", "HP ( Horrifying Players )")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
- channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;        
+                    console.log(3);
+                    console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
+ channel.send(` :hearts: **تم دعوته من قبل ${Invite.inviter} :hearts: 
+:hearts: رابط الدعوه --> https://discord.gg/${Invite.code} :hearts:
+:hearts: عضو رقم --> ${member.guild.memberCount} :hearts: **`)            
  }
             dat[Inv] = Invite.uses;
-       
-       });
-    });
-}); 
-
+        })
+    })
+});
 
 client.on('message', message => {
     var prefix = ".";
