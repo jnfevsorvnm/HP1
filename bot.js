@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const moment = require('moment');
+const fs = require('fs');
 const arraySort = require('array-sort'),
       table = require('table');
 
