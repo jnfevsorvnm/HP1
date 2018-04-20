@@ -40,7 +40,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     if (msg.content === '.inviter') {
             msg.guild.fetchInvites()
-     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`))
+     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`)) 
     }
   });
 
@@ -410,7 +410,7 @@ client.on('message', message => {
     });
     
 
-  client.on("message", message => {
+client.on("message", message => {
     var prefix = "ا";
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix +"مسح")) {
@@ -428,9 +428,9 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
                             message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
                             let embed4 = new Discord.RichEmbed()
                                                             .setColor("#008000")
-                                .setDescription(":white_check_mark: | Delete " + args[1] + " Message! by `**<@` + `${z.id}` + `>**`, true)
-                                                                                        message.delete("2000");
-                                message.channel.sendEmbed(embed4) .then(msg => msg.delete(2000));
+                                .setDescription(":white_check_mark: | Delete " + args[1] + `Message! by "**<@` + `${z.id}` + `>**`, true)
+                                                                                        message.delete("3000");
+                                message.channel.sendEmbed(embed4) .then(msg => msg.delete(3000));
                             }
                           }
 });  
