@@ -88,6 +88,7 @@ rebel.pointsMonitor = (dateformat, message) => {
   rebel.points.set(message.author.id, score);
 };
 });
+rebel.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
