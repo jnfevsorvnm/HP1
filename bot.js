@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const moment = require('moment');
 const fs = require('fs');
+const dateFormat = require('dateformat');
 const arraySort = require('array-sort'),
       table = require('table');
 
@@ -88,6 +89,8 @@ rebel.pointsMonitor = (dateformat, message) => {
   rebel.points.set(message.author.id, score);
 };
 });
+
+
 rebel.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
