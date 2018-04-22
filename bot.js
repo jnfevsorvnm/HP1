@@ -33,7 +33,6 @@ client.on('message' , async (message) => {
 });
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '.';
 const discord_token = process.env.BOT_TOKEN;
 client.login(discord_token);
 client.on('ready', function() {
@@ -73,6 +72,7 @@ var download = function(uri, filename, callback) {
 };
 
 client.on('message', function(message) {
+var prefix = ".";
 	const member = message.member;
 	const mess = message.content.toLowerCase();
 	const args = message.content.split(' ').slice(1).join(' ');
@@ -256,6 +256,7 @@ function isYoutube(str) {
 	return str.toLowerCase().indexOf('youtube.com') > -1;
 }
  client.on('message', message => {
+var prefix = ".";
      if (message.content === prefix +"مساعدة") {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
