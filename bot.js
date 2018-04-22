@@ -40,8 +40,7 @@ command = command.slice(prefix.length);
 var args = message.content.split(" ").slice(1);
 	if(command == "mute") {
 	let user = message.mentions.users.first();
-let muteRole = message.guild.roles.find("name", "Muted");
-if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").then(msg => {msg.delete(5000)});
+let Role = message.guild.roles.find("name", "muted");
 if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **').then(msg => {msg.delete(5000)});
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
   if(message.guild.member(user).hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
