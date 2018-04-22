@@ -1072,7 +1072,7 @@ client.on('message', message => {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1091,7 +1091,7 @@ if (message.content === x2) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1110,7 +1110,7 @@ if (message.content === x3) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1129,7 +1129,7 @@ if (message.content === x4) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1148,7 +1148,7 @@ if (message.content === x5) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1167,7 +1167,7 @@ if (message.content === x6) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1186,7 +1186,7 @@ if (message.content === x7) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1205,7 +1205,7 @@ if (message.content === x8) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1224,7 +1224,7 @@ if (message.content === x9) {
     message.member.removeRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1243,7 +1243,7 @@ if (message.content === x10) {
     message.member.addRole(message.guild.roles.find("name", "10"));
 	const embed = new Discord.RichEmbed()
 	.setThumbnail(message.author.avatarURL)
-	.setFooter('Nice Color!', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
+	.setFooter('Nice Color!', 'https://i.imgur.com/wtwxC6H.jpg')
 	.addField('Requested by:', "<@" + message.author.id + ">")
   .setDescription(`تم تغيير اللون بنجاح`)
   message.channel.sendEmbed(embed);
@@ -1252,8 +1252,8 @@ if (message.content === x10) {
 if (message.content === "الوان") {
 	const embed = new Discord.RichEmbed()
 	.setColor('RANDOM')
-	.setFooter('5bz | Color', 'http://www.freeiconspng.com/uploads/color-icon-png-13.png')
-	.setDescription(`Type: .color number`)
+	.setFooter('HP CLAN | Color', 'https://i.imgur.com/wtwxC6H.jpg')
+	.setDescription(`Type: لون <number>`)
 	.setImage('https://media.discordapp.net/attachments/378292626601934848/437707981971259432/colors.png?width=450&height=117')
 	message.channel.sendEmbed(embed);
 	message.react("??")
