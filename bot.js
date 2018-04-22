@@ -27,7 +27,6 @@ client.on('message' , async (message) => {
     message.channel.send(embed)
     }
 });
-
 client.on('message', async message =>{
   var prefix = "+";
 const listMuted = require("./listMuted.json");
@@ -40,7 +39,8 @@ command = command.slice(prefix.length);
 var args = message.content.split(" ").slice(1);
 	if(command == "mute") {
 	let user = message.mentions.users.first();
-let Role = message.guild.roles.find("name", "muted");
+let muteRole = message.guild.roles.find("name", "Muted");
+if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").then(msg => {msg.delete(5000)});
 if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **').then(msg => {msg.delete(5000)});
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
   if(message.guild.member(user).hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
@@ -48,14 +48,14 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No ca
   if(!mutetime) return message.reply("Please enter duration");
   let reason = args.slice(2).join(" ");
  if(!reason) return message.reply("Please supply a reason.");
-  if(message.guild.member(user).roles.has(message.guild.roles.find("name", "muted").id)) return message.reply('This Member is Already Taken Mute');
+  if(message.guild.member(user).roles.has(message.guild.roles.find("name", "Muted").id)) return message.reply('This Member is Already Taken Mute');
 
-  let muterole = message.guild.roles.find(`name`, "muted");
+  let muterole = message.guild.roles.find(`name`, "Muted");
   //start of create role
   if(!muterole){
     try{
       muterole = await message.guild.createRole({
-        name: "muted",
+        name: "Muted",
         color: "#000000",
         permissions:[]
       })
@@ -132,7 +132,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No ca
 Uesr : ${user} unMute \n By: <@${message.author.id}>
 In Channel : <#${message.channel.id}>
     ***`)
-  .setFooter("Moha,xd ||=> "+Year+"."+Month+"."+Day+" -"+hours+":"+minutes+" "+suffix);
+  .setFooter("Omar,Jedol ||=> "+Year+"."+Month+"."+Day+" -"+hours+":"+minutes+" "+suffix);
 
   let RomLog = message.guild.channels.find(`name`, "log");
   if(!RomLog) return message.reply("Please create a incidents channel first!");
@@ -149,10 +149,9 @@ if (err) throw err;
 	})
 client.on("guildMemberAdd", member => {
   if(listMuted[member.id]) {
-    member.addRole(member.guild.roles.find("name","muted"));
+    member.addRole(member.guild.roles.find("name","Muted"));
   }
 })
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
   });
@@ -335,7 +334,7 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
 	.setDescription(`نقاطك: \`${userData.points}\``)
 	message.channel.sendEmbed(embed)
   }
-  fs.writeFile("./l3b/3wasmPTS.json", JSON.stringify(points), (err) => {
+  fs.writeFile("./l3b/3wasmPTS.json", JSON.stringify(points), (err) => {  
     if (err) console.error(err)
   })
 });
