@@ -28,7 +28,131 @@ client.on('message' , async (message) => {
     }
 });
 
+client.on('message', async message =>{
+  var prefix = "+";
+const listMuted = require("./listMuted.json");
+const fs = require("fs"); // npm i fs
+const ms = require("ms");
+	if (message.author.omar) return;
+if (!message.content.startsWith(prefix)) return;
+var command = message.content.split(" ")[0];
+command = command.slice(prefix.length);
+var args = message.content.split(" ").slice(1);
+	if(command == "mute") {
+	let user = message.mentions.users.first();
+let muteRole = message.guild.roles.find("name", "Muted");
+if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").then(msg => {msg.delete(5000)});
+if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **').then(msg => {msg.delete(5000)});
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
+  if(message.guild.member(user).hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
+  let mutetime = args[1];
+  if(!mutetime) return message.reply("Please enter duration");
+  let reason = args.slice(2).join(" ");
+ if(!reason) return message.reply("Please supply a reason.");
+  if(message.guild.member(user).roles.has(message.guild.roles.find("name", "muted").id)) return message.reply('This Member is Already Taken Mute');
 
+  let muterole = message.guild.roles.find(`name`, "muted");
+  //start of create role
+  if(!muterole){
+    try{
+      muterole = await message.guild.createRole({
+        name: "muted",
+        color: "#000000",
+        permissions:[]
+      })
+      message.guild.channels.forEach(async (channel, id) => {
+        await channel.overwritePermissions(muterole, {
+          SEND_MESSAGES: false,
+          ADD_REACTIONS: false
+        });
+      });
+    }catch(e){
+      console.log(e.stack);
+    }
+  }
+  //end of create role
+
+
+  message.delete().catch(O_o=>{});
+
+  try{
+    await user.send(`Hi! You've been muted for ${mutetime}. Sorry!`)
+  }catch(e){
+    message.channel.send(`A user has been muted... They will be muted for ${mutetime} !!`)
+  }
+
+  let muteembed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setTitle(`Member has taken ** Mute **`)
+  .setDescription(`***
+Uesr : ${user} Taken Mute \n By: <@${message.author.id}>
+Because : [${reason}] \n For This Period : ${mutetime}
+In Channel : <#${message.channel.id}>
+    ***`)
+  .setFooter("Omar,Jedol ||=> "+Year+"."+Month+"."+Day+" -"+hours+":"+minutes+" "+suffix);
+
+  let RomLog = message.guild.channels.find(`name`, "log");
+  if(!RomLog) return message.reply("Please create a incidents channel first!");
+  RomLog.send(muteembed);
+
+ message.guild.member(user).addRole(muterole.id);
+
+  listMuted[user.id] = {
+    guild : message.guild.id,
+    MuteBy : message.author.id,
+    time : args[1],
+  }
+
+  fs.writeFile("./listMuted.json" , JSON.stringify(listMuted , null , 4), err => {
+if (err) throw err;
+});
+
+  setTimeout(function(){
+ message.guild.member(user).removeRole(muterole.id);
+    message.channel.send(`<@${user.id}> has been unmuted!`);
+
+   delete listMuted[user.id];
+   fs.writeFile("./listMuted.json", JSON.stringify(listMuted), err => {
+     if(err) throw err;
+   });
+
+  }, ms(mutetime));
+
+	}
+
+	if(command == "unmute" ) {
+		let user = message.mentions.users.first();
+		if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **').then(msg => {msg.delete(5000)});
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
+  if(message.guild.member(user).hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
+ message.guild.member(user).addRole(muterole.id);
+	let muteembed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setTitle(`Member ** unMute **`)
+  .setDescription(`***
+Uesr : ${user} unMute \n By: <@${message.author.id}>
+In Channel : <#${message.channel.id}>
+    ***`)
+  .setFooter("Moha,xd ||=> "+Year+"."+Month+"."+Day+" -"+hours+":"+minutes+" "+suffix);
+
+  let RomLog = message.guild.channels.find(`name`, "log");
+  if(!RomLog) return message.reply("Please create a incidents channel first!");
+  RomLog.send(muteembed);
+  let muterole = message.guild.roles.find(`name`, "muted");
+ message.guild.member(user).removeRole(muterole.id);
+  message.channel.send(`<@${user.id}> has been unmuted!`);
+
+  delete listMuted[user.id];
+  fs.writeFile("./listMuted.json" , JSON.stringify(listMuted , null , 4), err => {
+if (err) throw err;
+});
+	}
+	})
+bot.on("guildMemberAdd", member => {
+  if(listMuted[member.id]) {
+    member.addRole(member.guild.roles.find("name","muted"));
+  }
+})
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
