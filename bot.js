@@ -1058,7 +1058,7 @@ var x7 = "لون 7"
 var x8 = "لون 8"
 var x9 = "لون 9"
 var x10 = "لون 10"
-x5bz.on('message', message => {
+client.on('message', message => {
 	if (message.content === x1) {
 		message.member.addRole(message.guild.roles.find("name", "1"));
     message.member.removeRole(message.guild.roles.find("name", "2"));
