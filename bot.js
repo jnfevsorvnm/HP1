@@ -148,7 +148,7 @@ if (err) throw err;
 });
 	}
 	})
-clinet.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   if(listMuted[member.id]) {
     member.addRole(member.guild.roles.find("name","muted"));
   }
