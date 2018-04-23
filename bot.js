@@ -113,7 +113,7 @@ hours = currentTime.getHours() + 3 ,
     }
   });
 
-  client.on('message', function(message) {
+      client.on("message", message => {
     var prefix = ".";
   if(command === `mute`) {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("Yutz i don't have permission");
