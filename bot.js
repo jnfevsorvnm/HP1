@@ -112,7 +112,7 @@ hours = currentTime.getHours() + 3 ,
     
     }
   });
-client.on('message', function(message) {
+client.on('message' , async (message) => {
     var prefix = ".";
   if(command === `mute`) {
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
