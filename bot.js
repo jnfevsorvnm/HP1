@@ -112,65 +112,50 @@ hours = currentTime.getHours() + 3 ,
     
     }
   });
-
-client.on('message' , async (message) => {
+client.on('message', function(message) {
     var prefix = ".";
   if(command === `mute`) {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("Yutz i don't have permission");
-    
-    let toMute = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-    if(!toMute) return message.channel.sendMessage("Yutz who should i mute?")
-    
-    if(toMute.id === message.author.id) return message.channel.sendMessage("yutz you cannot mute yourself!");
-    if(toMute.highestRole.position >= message.member.highestRole.position) return message.channel.sendMessage("Yutz this person has a higher role");
-    
-    let role = message.guild.roles.find(r => r.name === "Muted");
-    if(!role) {
-        try {
-            role = await message.guild.createRole({
-                name:"Muted",
-                color: "#000000",
-                permissions: []
-            });
-            
-            message.guild.channels.forEach(async (channel, id) => {
-                await channel.overwritePermissions(role, {
-                SEND_MESSAGES: false,
-                ADD_REACTIONS: false
-                });
-            });
-         } catch(e) {
-                console.log(e.stack);
-         }
-    
-        }
-        
-     if(toMute.roles.has(role.id)) return message.channel.sendMessage("dis guy is already muted");
-    
-    await toMute.addRole(role);
-    message.channel.sendMessage("Ok they are muted yutz!");
-    
-    
-     return;
+  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!tomute) return message.reply("Couldn't find user.");
+  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry, you don't have permissions to use this!");
+  if (tomute.id === message.author.id) return message.channel.send("You cannot mute yourself!");
+  let muterole = message.guild.roles.find(`name`, "Muted");
+
+  if(!muterole){
+    try{
+      muterole = await message.guild.createRole({
+        name: "Muted",
+        color: "#000000",
+        permissions:[]
+      })
+      message.guild.channels.forEach(async (channel, id) => {
+        await channel.overwritePermissions(muterole, {
+          SEND_MESSAGES: false,
+          ADD_REACTIONS: false
+        });
+      });
+    }catch(e){
+      console.log(e.stack);
     }
-    if(command === `unmute`) {
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("Yutz i don't have permission");
-        
-        let toMute = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-        if(!toMute) return message.channel.sendMessage("Yutz who should i unmute?")
-        
-        let role = message.guild.roles.find(r => r.name === "Muted");
-       
-            
-         if(!role || !toMute.roles.has(role.id)) return message.channel.sendMessage("This guy isn't even muted yutz");
-        
-        await toMute.removeRole(role);
-        message.channel.sendMessage("Ok they are unmuted yutz!");
-        
-         return;
-    } 
+  }
+
+  let mutetime = args[1];
+  if(!mutetime) return message.reply("You didn't specify a time!");
+
+  await(tomute.addRole(muterole.id));
+  message.reply(`<@${tomute.id}> has been muted for ${ms(ms(mutetime))}`);
+
+  setTimeout(function(){
+    tomute.removeRole(muterole.id);
+    message.channel.send(`<@${tomute.id}> has been unmuted!`);
+  }, ms(mutetime));
+
+  message.delete();
+
+}
 
 });
+
 
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
