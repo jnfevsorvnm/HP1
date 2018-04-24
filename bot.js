@@ -117,7 +117,6 @@ hours = currentTime.getHours() + 3 ,
 
 
 const Eris = require("eris");
-var client = new Eris(process.env.BOT_TOKEN);
 
 var chaneel_id = "438460432668295169";
                     var i = "0";
