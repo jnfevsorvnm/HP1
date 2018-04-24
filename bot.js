@@ -119,7 +119,7 @@ client.on('message', message => {
 if(!message.channel.guild) return;
    if(message.content.startsWith(prefix + 'colors')) {
    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-   message.channel.sendFile(`https://media.discordapp.net/attachments/378292626601934848/438385772559597580/Untitled-1.png?width=864&height=486`).then(msg => {
+   message.channel.sendFile(`https://i.imgur.com/T5WN89n.png`).then(msg => {
    msg.react('❤')
    .then(() => msg.react('💚'))
    .then(() => msg.react('💜'))
