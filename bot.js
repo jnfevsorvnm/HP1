@@ -148,6 +148,32 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
+ 
+client.on("message", message => { 
+    var prefix = ".";
+    var args = message.content.split(' ').slice(1);     
+    if( message.content.startsWith( prefix + "roleAdd" ) ){ 
+        if( !message.member.hasPermission('ADMINISTRATOR') ) return message.reply( "** :x: لا تملك صلاحية لعمل الأمر **" ); 
+        if( !args[0] ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
+        if( !args[1] ) return message.reply('**:x: يرجى وضع أيدي الرتبة **'); 
+        if( roles[args[0]] ) return message.reply( "**:x: توجد رتبة بالفعل بهذا الأسم **" );
+        if( !message.guild.roles.get(args[1]) ) return message.reply( "**:x: لم يتم إيجاد الرتبة **" );
+        roles[args[0]] = args[1];
+        message.reply('**:white_check_mark: [ '+args[0]+' ] تمت أضافة الرتبة **') 
+    } else if ( message.content.startsWith( prefix + "roles" ) ){ 
+        var Roles = "";
+        for( var role in roles ){
+            Roles+=role+"\n";
+        }
+        if( Roles == "" ) return message.reply( '**:x: لا توجد أي رتبة**'); 
+        message.reply("**:white_check_mark: الرتب المتواجدة هي : **\n"+Roles); 
+    } else if ( message.content.startsWith( prefix + "role" ) ){
+        if( !args[0] ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
+        if( !roles[args[0]] ) return message.reply( "** :x: لا توجد رتبة بهذا الأسم **" ); 
+        message.reply('**:white_check_mark: [ '+message.guild.members.filter(m=>m.roles.get(roles[args[0]])).size+' ] هو [ '+args[0]+' ] عدد الذين يملكون رتبة  **'); 
+    } 
+});
+
 client.on('message' , async (message) => {
     var prefix = ".";
   if(command === `mute`) {
