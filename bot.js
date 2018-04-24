@@ -116,7 +116,7 @@ hours = currentTime.getHours() + 3 ,
 
 var Eris = require("eris");
 let  ID = "438460432668295169";
-const client = new Eris(process.env.BOT_TOKEN);
+var client = new Eris(process.env.BOT_TOKEN);
 client.connect(process.env.BOT_TOKEN)
 client.on("ready", ready => {
 setInterval(function(){
@@ -143,19 +143,53 @@ setInterval(function(){
             if (hours == 0) {
                 hours = 12;
             }
-message.editChannel("Channel iD", {name : "|=> Hor <=|"})
-message.editChannel("Channel iD", {name : "|=> Horr <=|"})
-message.editChannel("Channel iD", {name : "|=> Horri <=|"})
-message.editChannel("Channel iD", {name : "|=> Horrif <=|"})
-message.editChannel("Channel iD", {name : "|=> Horrify <=|"})
-message.editChannel("Channel iD", {name : "|=> Horrifyi <=|"})
-message.editChannel("Channel iD", {name : "|=> Horrifyin <=|"})
-message.editChannel("Channel iD", {name : "|=> Horrifying <=|"})
+client.editChannel("Channel iD", {name : "|=> Hor <=|"})
+client.editChannel("Channel iD", {name : "|=> Horr <=|"})
+client.editChannel("Channel iD", {name : "|=> Horri <=|"})
+client.editChannel("Channel iD", {name : "|=> Horrif <=|"})
+client.editChannel("Channel iD", {name : "|=> Horrify <=|"})
+client.editChannel("Channel iD", {name : "|=> Horrifyi <=|"})
+client.editChannel("Channel iD", {name : "|=> Horrifyin <=|"})
+client.editChannel("Channel iD", {name : "|=> Horrifying <=|"})
 
 }, 3000);
 
 });
 
+
+ var Eris = require("eris");
+var ID = "438463232513146882";
+var client = new Eris(process.env.BOT_TOKEN);
+client.connect(process.env.BOT_TOKEN)
+client.on("ready", ready => {
+setInterval(function(){
+ 
+            var currentTime = new Date(),
+            hours = currentTime.getHours() + 2 ,
+            minutes = currentTime.getMinutes(),
+            seconds = currentTime.getSeconds(),
+            years = currentTime.getFullYear(),
+            month = currentTime.getMonth() + 1,
+            day = currentTime.getDate(),
+            week = currentTime.getDay();
+           
+             
+ 
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            var suffix = "AM";
+            if (hours >= 12) {
+                suffix = "PM";
+                hours = hours - 12;
+            }
+            if (hours == 0) {
+                hours = 12;
+            }
+client.editChannel("438463232513146882", {name : "- Users  (" + client.users.size + ")"});
+}, 3000);
+ 
+}); 
 
 client.on('message', message => { 
         var prefix = "ا";                     
