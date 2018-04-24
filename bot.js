@@ -36,6 +36,8 @@ client.on('message' , async (message) => {
 var user = {};
 var warn = {};
 
+
+
 client.on('message', function(message) {
 
     	 if (!message.channel.guild) return;
@@ -114,80 +116,44 @@ hours = currentTime.getHours() + 3 ,
   });
 
 
-var Eris = require("eris");
-let ID = "438460432668295169";
-client.connect(process.env.BOT_TOKEN)
-client.on("ready", ready => {
-setInterval(function(){
+const Eris = require("eris");
+var client = new Eris(process.env.BOT_TOKEN);
 
-            let currentTime = new Date(),
-            hours = currentTime.getHours() + 2 ,
-            minutes = currentTime.getMinutes(),
-            seconds = currentTime.getSeconds(),
-            years = currentTime.getFullYear(),
-            month = currentTime.getMonth() + 1,
-            day = currentTime.getDate(),
-            week = currentTime.getDay();
-
-
-
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            var suffix = "AM";
-            if (hours >= 12) {
-                suffix = "PM";
-                hours = hours - 12;
-            }
-            if (hours == 0) {
-                hours = 12;
-            }
-client.editChannel("Channel iD", {name : "|=> Hor <=|"})
-client.editChannel("Channel iD", {name : "|=> Horr <=|"})
-client.editChannel("Channel iD", {name : "|=> Horri <=|"})
-client.editChannel("Channel iD", {name : "|=> Horrif <=|"})
-client.editChannel("Channel iD", {name : "|=> Horrify <=|"})
-client.editChannel("Channel iD", {name : "|=> Horrifyi <=|"})
-client.editChannel("Channel iD", {name : "|=> Horrifyin <=|"})
-client.editChannel("Channel iD", {name : "|=> Horrifying <=|"})
-
-}, 3000);
-
+var chaneel_id = "438460432668295169";
+                    var i = "0";
+                    var x = "0";
+client.on("voiceChannelJoin", (msg) => {
+    x++;
+    message.editChannel(chaneel_id, { name : " Voice Online " + x + ""});
+});
+client.on("voiceChannelLeave", (msg) => {
+    x--;
+    message.editChannel(chaneel_id, { name : " Voice Online " + x + ""});
 });
 
-
- var Eris = require("eris");
-let ID = "438463232513146882";
-client.connect(process.env.BOT_TOKEN)
-client.on("ready", ready => {
-setInterval(function(){
- 
-            var currentTime = new Date(),
-            hours = currentTime.getHours() + 2 ,
-            minutes = currentTime.getMinutes(),
-            seconds = currentTime.getSeconds(),
-            years = currentTime.getFullYear(),
-            month = currentTime.getMonth() + 1,
-            day = currentTime.getDate(),
-            week = currentTime.getDay();
-           
-             
- 
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            var suffix = "AM";
-            if (hours >= 12) {
-                suffix = "PM";
-                hours = hours - 12;
-            }
-            if (hours == 0) {
-                hours = 12;
-            }
-client.editChannel("438463232513146882", {name : "- Users  (" + client.users.size + ")"});
-}, 3000);
- 
-}); 
+client.on("messageCreate", (msg) => {
+    if(msg.author.id !== "438460432668295169") return Codes.createMessage('__**This Command is only for the bot Owner**__');
+    if(msg.content === ".voice") {
+        let users = msg.channel.guild.members.map(m => m.user.id);
+        let messages = [];
+        messages.push(users);
+        setTimeout(function(){
+        while (i <= messages[0].length - 1) {
+            check = msg.channel.guild.members.get(messages[0][i]);
+        if(!check.voiceState.channelID){
+                i++;
+        }else{
+                x++;
+                i++;
+        }
+}
+    console.log(x);
+    message.createMessage(msg.channel.id, "Voice Online Members Now Are: **"+x+"** Members!");
+    message.editChannel(chaneel_id, { name : " Voice Online "+x+""});
+    messages = [];
+}, 1);
+    }
+});
 
 client.on('message', message => { 
         var prefix = "ا";                     
