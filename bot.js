@@ -115,7 +115,7 @@ hours = currentTime.getHours() + 3 ,
 
 
 var Eris = require("eris");
-var ID = "438460432668295169";
+let ID = "438460432668295169";
 client.connect(process.env.BOT_TOKEN)
 client.on("ready", ready => {
 setInterval(function(){
@@ -157,7 +157,7 @@ client.editChannel("Channel iD", {name : "|=> Horrifying <=|"})
 
 
  var Eris = require("eris");
-var ID = "438463232513146882";
+let ID = "438463232513146882";
 client.connect(process.env.BOT_TOKEN)
 client.on("ready", ready => {
 setInterval(function(){
