@@ -115,7 +115,7 @@ hours = currentTime.getHours() + 3 ,
 
 
 var Eris = require("eris");
-let  ID = "438460432668295169";
+var ID = "438460432668295169";
 client.connect(process.env.BOT_TOKEN)
 client.on("ready", ready => {
 setInterval(function(){
