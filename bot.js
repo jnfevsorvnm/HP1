@@ -681,7 +681,7 @@ message.react("✔")
 client.on('message', msg => {
     if (msg.content === '.inviter') {
             msg.guild.fetchInvites()
-     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`)) 
+     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`)) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000)); 
     }
   });
 
@@ -698,7 +698,7 @@ client.on('message', msg => {
     var prefix = ".";
     const command = message.content.split(" ")[0];
 
-    if(command == prefix+"vc"){
+    if(command == prefix+"voicekick"){
 
         if (!message.guild.member(message.author).hasPermission('MOVE_MEMBERS') || !message.guild.member(message.author).hasPermission('ADMINISTRATOR')) {
             return message.reply('you do not have permission to perform this action!');
