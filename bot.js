@@ -115,65 +115,31 @@ hours = currentTime.getHours() + 3 ,
     }
   });
 
-client.on('message', message => {
-var prefix = "."; 
-    let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'role')) {
-        let member = message.mentions.users.first();
-        let role = args.join(' ').replace(member, '').replace(args[0], '').replace(' ', '');
-        console.log(role);
-        if(member) {
-              if(role.startsWith('-')) {
-                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
-                console.log(roleRe);
-                let role1 = message.guild.roles.find('name', roleRe);
-                console.log(`hi`);
-                if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
-                message.guild.member(member).removeRole(role1.id);
-            } else if(!role.startsWith('-')) {
-                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
-                let role1 = message.guild.roles.find('name', roleRe);
-                if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
-                message.guild.member(member).addRole(role1);
-            } else {
-                message.reply(`يجب عليك كتابة اسم الرتبة`);
-            } 
+
+var roles = {}; 
+var prefix = '.';
+client.on("message", message => { 
+    var args = message.content.split(' ').slice(1);     
+    if( message.content.startsWith( prefix + "role" ) ){ 
+        if( !message.member.hasPermission('ADMINISTRATOR') ) return message.reply( "** :x: لا تملك صلاحية لعمل الأمر **" ); 
+        if( !args[0] ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
+        if( !args[1] ) return message.reply('**:x: يرجى وضع أيدي الرتبة **'); 
+        if( roles[args[0]] ) return message.reply( "**:x: توجد رتبة بالفعل بهذا الأسم **" );
+        if( !message.guild.roles.get(args[1]) ) return message.reply( "**:x: لم يتم إيجاد الرتبة **" );
+        roles[args[0]] = args[1];
+        message.reply('**:white_check_mark: [ '+args[0]+' ] تمت أضافة الرتبة **') 
+    } else if ( message.content.startsWith( prefix + "roles" ) ){ 
+        var Roles = "";
+        for( var role in roles ){
+            Roles+=role+"\n";
         }
- else if(args[0] == 'all') {
-    if(role) {
-    let role1 = message.guild.roles.find('name', role);
-    if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
-    message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
-        message.guild.members.forEach(m => {
-            message.guild.member(m).addRole(role1);
-        });
-        msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
-    });
-}
-} else if(args[0] == 'humans') {
-    if(role) {
-        let role1 = message.guild.roles.find('name', role);
-        if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
-        message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
-            message.guild.members.filter(m =>m.user.bot == false).forEach(m => {
-                message.guild.member(m).addRole(role1);
-            });
-            msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
-        });
-    }
-} else if(args[0] == 'bots') {
-    if(role) {
-        let role1 = message.guild.roles.find('name', role);
-        if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
-        message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
-            message.guild.members.filter(m =>m.user.bot == true).forEach(m => {
-                message.guild.member(m).addRole(role1);
-            });
-msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
-});
-}
-}
-}
+        if( Roles == "" ) return message.reply( '**:x: لا توجد أي رتبة**'); 
+        message.reply("**:white_check_mark: الرتب المتواجدة هي : **\n"+Roles); 
+    } else if ( message.content.startsWith( prefix + "role" ) ){
+        if( !args[0] ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
+        if( !roles[args[0]] ) return message.reply( "** :x: لا توجد رتبة بهذا الأسم **" ); 
+        message.reply('**:white_check_mark: [ '+message.guild.members.filter(m=>m.roles.get(roles[args[0]])).size+' ] هو [ '+args[0]+' ] عدد الذين يملكون رتبة  **'); 
+    } 
 });
 
 
