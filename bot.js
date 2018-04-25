@@ -681,7 +681,7 @@ message.react("✔")
 client.on('message', msg => {
     if (msg.content === '.inviter') {
             msg.guild.fetchInvites()
-     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`)) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000)); 
+     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`)) 
     }
   });
 
