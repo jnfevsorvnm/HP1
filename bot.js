@@ -187,70 +187,70 @@ if(!message.channel.guild) return;
  
    red.on("collect", r => {
        message.member.addRole(message.guild.roles.find("name", "red"));
-       message.member.removeRole(message.guild.roles.find("name", "black"));
-       message.member.removeRole(message.guild.roles.find("name", "yellow"));
-       message.member.removeRole(message.guild.roles.find("name", "purple"));
-       message.member.removeRole(message.guild.roles.find("name", "green"));
-       message.member.removeRole(message.guild.roles.find("name", "blue"));
+       message.member.removeRole(message.guild.roles.find("name", "Black"));
+       message.member.removeRole(message.guild.roles.find("name", "Yellow"));
+       message.member.removeRole(message.guild.roles.find("name", "Purple"));
+       message.member.removeRole(message.guild.roles.find("name", "Green"));
+       message.member.removeRole(message.guild.roles.find("name", "Blue"));
        msg.delete();
        message.channel.send(`**تم اعطائك اللون __الاحمر__.**`).then(m => m.delete(5000));
  
        })
      
        green.on("collect", r => {
-           message.member.addRole(message.guild.roles.find("name", "green"));
-           message.member.removeRole(message.guild.roles.find("name", "black"));
-           message.member.removeRole(message.guild.roles.find("name", "yellow"));
-           message.member.removeRole(message.guild.roles.find("name", "purple"));
-           message.member.removeRole(message.guild.roles.find("name", "red"));
-           message.member.removeRole(message.guild.roles.find("name", "blue"));
+           message.member.addRole(message.guild.roles.find("name", "Green"));
+           message.member.removeRole(message.guild.roles.find("name", "Black"));
+           message.member.removeRole(message.guild.roles.find("name", "Yellow"));
+           message.member.removeRole(message.guild.roles.find("name", "Purple"));
+           message.member.removeRole(message.guild.roles.find("name", "Red"));
+           message.member.removeRole(message.guild.roles.find("name", "Blue"));
            msg.delete();
            message.channel.send(`**تم اعطائك اللون __الاخضر__.**`).then(m => m.delete(5000));
  
            })
          
            purple.on("collect", r => {
-               message.member.addRole(message.guild.roles.find("name", "purple"));
-               message.member.removeRole(message.guild.roles.find("name", "black"));
-               message.member.removeRole(message.guild.roles.find("name", "yellow"));
-               message.member.removeRole(message.guild.roles.find("name", "green"));
-               message.member.removeRole(message.guild.roles.find("name", "red"));
-               message.member.removeRole(message.guild.roles.find("name", "blue"));
+               message.member.addRole(message.guild.roles.find("name", "Purple"));
+               message.member.removeRole(message.guild.roles.find("name", "Black"));
+               message.member.removeRole(message.guild.roles.find("name", "Yellow"));
+               message.member.removeRole(message.guild.roles.find("name", "Green"));
+               message.member.removeRole(message.guild.roles.find("name", "Red"));
+               message.member.removeRole(message.guild.roles.find("name", "Blue"));
                msg.delete();
                message.channel.send(`**تم اعطائك اللون __البنفسجي__.**`).then(m => m.delete(1000));
  
                })
              
                yellow.on("collect", r => {
-                   message.member.addRole(message.guild.roles.find("name", "yellow"));
-                   message.member.removeRole(message.guild.roles.find("name", "black"));
-                   message.member.removeRole(message.guild.roles.find("name", "purple"));
-                   message.member.removeRole(message.guild.roles.find("name", "green"));
-                   message.member.removeRole(message.guild.roles.find("name", "red"));
-                   message.member.removeRole(message.guild.roles.find("name", "blue"));
+                   message.member.addRole(message.guild.roles.find("name", "Yellow"));
+                   message.member.removeRole(message.guild.roles.find("name", "Black"));
+                   message.member.removeRole(message.guild.roles.find("name", "Purple"));
+                   message.member.removeRole(message.guild.roles.find("name", "Green"));
+                   message.member.removeRole(message.guild.roles.find("name", "Red"));
+                   message.member.removeRole(message.guild.roles.find("name", "Blue"));
                    msg.delete();
                    message.channel.send(`**تم اعطائك اللون __الاصفر__.**`).then(m => m.delete(1000));
  
                    })
                  
                    black.on("collect", r => {
-                       message.member.addRole(message.guild.roles.find("name", "black"));
-                       message.member.removeRole(message.guild.roles.find("name", "yellow"));
-                       message.member.removeRole(message.guild.roles.find("name", "purple"));
-                       message.member.removeRole(message.guild.roles.find("name", "green"));
-                       message.member.removeRole(message.guild.roles.find("name", "red"));
-                       message.member.removeRole(message.guild.roles.find("name", "blue"));
+                       message.member.addRole(message.guild.roles.find("name", "Black"));
+                       message.member.removeRole(message.guild.roles.find("name", "Yellow"));
+                       message.member.removeRole(message.guild.roles.find("name", "Purple"));
+                       message.member.removeRole(message.guild.roles.find("name", "Green"));
+                       message.member.removeRole(message.guild.roles.find("name", "Red"));
+                       message.member.removeRole(message.guild.roles.find("name", "Blue"));
                        msg.delete();
                        message.channel.send(`**تم اعطائك اللون __الاسود__.**`).then(m => m.delete(1000));
  
                        })
                        noone.on("collect", r => {
-                           message.member.removeRole(message.guild.roles.find("name", "yellow"));
-                           message.member.removeRole(message.guild.roles.find("name", "purple"));
-                           message.member.removeRole(message.guild.roles.find("name", "green"));
-                           message.member.removeRole(message.guild.roles.find("name", "red"));
-                           message.member.removeRole(message.guild.roles.find("name", "blue"));
-                           message.member.removeRole(message.guild.roles.find("name", "black"));
+                           message.member.removeRole(message.guild.roles.find("name", "Yellow"));
+                           message.member.removeRole(message.guild.roles.find("name", "Purple"));
+                           message.member.removeRole(message.guild.roles.find("name", "Green"));
+                           message.member.removeRole(message.guild.roles.find("name", "Red"));
+                           message.member.removeRole(message.guild.roles.find("name", "Blue"));
+                           message.member.removeRole(message.guild.roles.find("name", "Black"));
                            msg.delete();
                            message.channel.send(`**تم ازالة جميع الالوان منك.**`).then(m => m.delete(1000));
  
