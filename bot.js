@@ -120,7 +120,7 @@ var roles = {};
 var prefix = '.';
 client.on("message", message => { 
     var args = message.content.split(' ').slice(1);     
-    if( message.content.startsWith( prefix + "role" ) ){ 
+    if( message.content.startsWith( prefix + "roleadd" ) ){ 
         if( !message.member.hasPermission('ADMINISTRATOR') ) return message.reply( "** :x: لا تملك صلاحية لعمل الأمر **" ); 
         if( !args[0] ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
         if( !args[1] ) return message.reply('**:x: يرجى وضع أيدي الرتبة **'); 
