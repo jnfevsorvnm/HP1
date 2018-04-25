@@ -115,44 +115,68 @@ hours = currentTime.getHours() + 3 ,
     }
   });
 
-
-const Eris = require("eris");
-
-var chaneel_id = "438460432668295169";
-                    var i = "0";
-                    var x = "0";
-client.on("voiceChannelJoin", (msg) => {
-    x++;
-    message.editChannel(chaneel_id, { name : " Voice Online " + x + ""});
-});
-client.on("voiceChannelLeave", (msg) => {
-    x--;
-    message.editChannel(chaneel_id, { name : " Voice Online " + x + ""});
-});
-
-client.on("messageCreate", (msg) => {
-    if(msg.author.id !== "438460432668295169") return Codes.createMessage('__**This Command is only for the bot Owner**__');
-    if(msg.content === ".voice") {
-        let users = msg.channel.guild.members.map(m => m.user.id);
-        let messages = [];
-        messages.push(users);
-        setTimeout(function(){
-        while (i <= messages[0].length - 1) {
-            check = msg.channel.guild.members.get(messages[0][i]);
-        if(!check.voiceState.channelID){
-                i++;
-        }else{
-                x++;
-                i++;
+client.on('message', message => {
+var prefix = "."; 
+    let args = message.content.split(' ').slice(1);
+    if(message.content.startsWith(prefix + 'role')) {
+        let member = message.mentions.users.first();
+        let role = args.join(' ').replace(member, '').replace(args[0], '').replace(' ', '');
+        console.log(role);
+        if(member) {
+              if(role.startsWith('-')) {
+                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+                console.log(roleRe);
+                let role1 = message.guild.roles.find('name', roleRe);
+                console.log(`hi`);
+                if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
+                message.guild.member(member).removeRole(role1.id);
+            } else if(!role.startsWith('-')) {
+                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+                let role1 = message.guild.roles.find('name', roleRe);
+                if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
+                message.guild.member(member).addRole(role1);
+            } else {
+                message.reply(`يجب عليك كتابة اسم الرتبة`);
+            } 
         }
+ else if(args[0] == 'all') {
+    if(role) {
+    let role1 = message.guild.roles.find('name', role);
+    if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
+    message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
+        message.guild.members.forEach(m => {
+            message.guild.member(m).addRole(role1);
+        });
+        msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
+    });
 }
-    console.log(x);
-    message.createMessage(msg.channel.id, "Voice Online Members Now Are: **"+x+"** Members!");
-    message.editChannel(chaneel_id, { name : " Voice Online "+x+""});
-    messages = [];
-}, 1);
+} else if(args[0] == 'humans') {
+    if(role) {
+        let role1 = message.guild.roles.find('name', role);
+        if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
+        message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
+            message.guild.members.filter(m =>m.user.bot == false).forEach(m => {
+                message.guild.member(m).addRole(role1);
+            });
+            msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
+        });
     }
+} else if(args[0] == 'bots') {
+    if(role) {
+        let role1 = message.guild.roles.find('name', role);
+        if(!role1) return message.reply(`الرتبة غير موجودة بالسيرفر تأكد من الاسم`);
+        message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
+            message.guild.members.filter(m =>m.user.bot == true).forEach(m => {
+                message.guild.member(m).addRole(role1);
+            });
+msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
 });
+}
+}
+}
+});
+
+
 
 client.on('message', message => { 
         var prefix = "ا";                     
