@@ -186,7 +186,7 @@ if(!message.channel.guild) return;
    let noone = msg.createReactionCollector(nooneFilter, { time: 15000 });
  
    red.on("collect", r => {
-       message.member.addRole(message.guild.roles.find("name", "red"));
+       message.member.addRole(message.guild.roles.find("name", "Red"));
        message.member.removeRole(message.guild.roles.find("name", "Black"));
        message.member.removeRole(message.guild.roles.find("name", "Yellow"));
        message.member.removeRole(message.guild.roles.find("name", "Purple"));
@@ -256,12 +256,12 @@ if(!message.channel.guild) return;
  
                            })                                                          
                            blue.on("collect", r => {
-                               message.member.addRole(message.guild.roles.find("name", "blue"));
-                               message.member.removeRole(message.guild.roles.find("name", "yellow"));
-                               message.member.removeRole(message.guild.roles.find("name", "purple"));
-                               message.member.removeRole(message.guild.roles.find("name", "green"));
-                               message.member.removeRole(message.guild.roles.find("name", "red"));
-                               message.member.removeRole(message.guild.roles.find("name", "black"));
+                               message.member.addRole(message.guild.roles.find("name", "Blue"));
+                               message.member.removeRole(message.guild.roles.find("name", "Yellow"));
+                               message.member.removeRole(message.guild.roles.find("name", "Purple"));
+                               message.member.removeRole(message.guild.roles.find("name", "Green"));
+                               message.member.removeRole(message.guild.roles.find("name", "Red"));
+                               message.member.removeRole(message.guild.roles.find("name", "Black"));
                                msg.delete();
                                message.channel.send(`**تم اعطائك اللون __الازرق__.**`).then(m => m.delete(1000));
  
