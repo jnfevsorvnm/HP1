@@ -487,49 +487,6 @@ client.on("guildMemberAdd", member => {
 })
 
  
-client.on('message' , async (message) => {
-    var prefix = ".";
-  if(command === `mute`) {
-  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tomute) return message.reply("Couldn't find user.");
-  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry, you don't have permissions to use this!");
-  if (tomute.id === message.author.id) return message.channel.send("You cannot mute yourself!");
-  let muterole = message.guild.roles.find(`name`, "Muted");
-
-  if(!muterole){
-    try{
-      muterole = await message.guild.createRole({
-        name: "Muted",
-        color: "#000000",
-        permissions:[]
-      })
-      message.guild.channels.forEach(async (channel, id) => {
-        await channel.overwritePermissions(muterole, {
-          SEND_MESSAGES: false,
-          ADD_REACTIONS: false
-        });
-      });
-    }catch(e){
-      console.log(e.stack);
-    }
-  }
-
-  let mutetime = args[1];
-  if(!mutetime) return message.reply("You didn't specify a time!");
-
-  await(tomute.addRole(muterole.id));
-  message.reply(`<@${tomute.id}> has been muted for ${ms(ms(mutetime))}`);
-
-  setTimeout(function(){
-    tomute.removeRole(muterole.id);
-    message.channel.send(`<@${tomute.id}> has been unmuted!`);
-  }, ms(mutetime));
-
-  message.delete();
-
-}
-
-});
 
 
 
@@ -906,9 +863,7 @@ client.on('message', msg => {
               message.guild.createChannel('voicekick', 'voice').then(c => {
                 member.setVoiceChannel(c).then(() => {
                     c.delete(305).catch(console.log)
-        
-
-
+ message.reply(' has been successfullly kicked from voice.');
     
       });
      });
