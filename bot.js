@@ -337,8 +337,8 @@ command = command.slice(prefix.length);
 var args = message.content.split(" ").slice(1);
 	if(command == "mute") {
 	let user = message.mentions.users.first();
-let muteRole = message.guild.roles.find("name", "muted");
-if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'muted' **").then(msg => {msg.delete(5000)});
+let muteRole = message.guild.roles.find("name", "Muted");
+if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").then(msg => {msg.delete(5000)});
 if (message.mentions.users.size < 1) return message.reply('** يجب عليك المنشن اولاً **').then(msg => {msg.delete(5000)});
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
   if(message.guild.member(user).hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
@@ -346,14 +346,14 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No ca
   if(!mutetime) return message.reply("Please enter duration");
   let reason = args.slice(2).join(" ");
  if(!reason) return message.reply("Please supply a reason.");
-  if(message.guild.member(user).roles.has(message.guild.roles.find("name", "muted").id)) return message.reply('This Member is Already Taken Mute');
+  if(message.guild.member(user).roles.has(message.guild.roles.find("name", "Muted").id)) return message.reply('This Member is Already Taken Mute');
 
-  let muterole = message.guild.roles.find(`name`, "muted");
+  let muterole = message.guild.roles.find(`name`, "Muted");
   //start of create role
   if(!muterole){
     try{
       muterole = await message.guild.createRole({
-        name: "muted",
+        name: "Muted",
         color: "#000000",
         permissions:[]
       })
@@ -435,7 +435,7 @@ In Channel : <#${message.channel.id}>
   let RomLog = message.guild.channels.find(`name`, "log");
   if(!RomLog) return message.reply("Please create a incidents channel first!");
   RomLog.send(muteembed);
-  let muterole = message.guild.roles.find(`name`, "muted");
+  let muterole = message.guild.roles.find(`name`, "Muted");
  message.guild.member(user).removeRole(muterole.id);
   message.channel.send(`<@${user.id}> has been unmuted!`);
 
@@ -447,7 +447,7 @@ if (err) throw err;
 	})
     client.on("guildMemberAdd", member => {
   if(listMuted[member.id]) {
-    member.addRole(member.guild.roles.find("name","muted"));
+    member.addRole(member.guild.roles.find("name","Muted"));
   }
 })
 
