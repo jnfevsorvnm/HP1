@@ -348,7 +348,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No ca
  if(!reason) return message.reply("Please supply a reason.");
   if(message.guild.member(user).roles.has(message.guild.roles.find('name', 'Muted').id)) return message.reply('This Member is Already Taken Mute');
 
- let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
+  let muterole = message.guild.roles.find(`name`, "Muted");
   //start of create role
   if(!muterole){
     try{
@@ -388,7 +388,7 @@ In Channel : <#${message.channel.id}>
     ***`)
   .setFooter("Moha ||=> "+Year+"."+Month+"."+Day+" -"+hours+":"+minutes+" "+suffix);
 
-  let RomLog = message.guild.channels.find(`name`, "log");
+  let RomLog = message.guild.channels.find(`name`, "logs");
   if(!RomLog) return message.reply("Please create a incidents channel first!");
   RomLog.send(muteembed);
 
@@ -432,7 +432,7 @@ In Channel : <#${message.channel.id}>
     ***`)
   .setFooter("Moha ||=> "+Year+"."+Month+"."+Day+" -"+hours+":"+minutes+" "+suffix);
 
-  let RomLog = message.guild.channels.find(`name`, "log");
+  let RomLog = message.guild.channels.find(`name`, "logss");
   if(!RomLog) return message.reply("Please create a incidents channel first!");
   RomLog.send(muteembed);
   let muterole = message.guild.roles.find('name', 'Muted');
