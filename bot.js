@@ -1221,7 +1221,7 @@ client.on('message', message => {
     if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**هذة الأمر للأدارة فقط**');
+if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**هذة الأمر للأدارة فقط**').then(m => m.delete(5000));
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 let copy = "HP CLAN";
 let request = `Requested By ${message.author.username}`;
@@ -1282,7 +1282,7 @@ client.on('message', message => {
         var prefix = ".";
     if (message.content.split(' ')[0] == 'bcall')
        message.guild.members.forEach( member => {
-         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**هذة الأمر للأدارة فقط**').then(m => m.delete(5000));
 
 
            member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.content.substr(3));
