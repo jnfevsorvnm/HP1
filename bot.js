@@ -348,7 +348,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No ca
  if(!reason) return message.reply("Please supply a reason.");
   if(message.guild.member(user).roles.has(message.guild.roles.find('name', 'Muted').id)) return message.reply('This Member is Already Taken Mute');
 
-  let muterole = message.guild.roles.find('name', 'Muted');
+ let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
   //start of create role
   if(!muterole){
     try{
