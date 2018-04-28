@@ -115,6 +115,29 @@ hours = currentTime.getHours() + 3 ,
     }
   });
 
+client.on('ready', () => {
+    
+               let currentTime = new Date(),
+            h = currentTime.getHours() + 3 ,
+            m = currentTime.getMinutes()+1-1,
+            s = currentTime.getSeconds()
+
+            if (m < 10) {
+                m = "0" + m;
+            }
+            var suffix = "AM";
+            if (h >= 12) {
+                suffix = "PM";
+                h = h - 12;
+            }
+            if (h == 0) {
+                h = 12;
+            }
+    setInterval(() => {
+        if(!true) return;
+            client.channels.get(`387310053809586176`).edit({name: `time is: ${h}:${m} ${suffix}.`});
+    },1*1000)
+})
 
 var roles = {}; 
 var prefix = '.';
