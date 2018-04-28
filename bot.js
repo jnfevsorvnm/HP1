@@ -135,7 +135,7 @@ client.on('ready', () => {
             }
     setInterval(() => {
         if(!true) return;
-            client.channels.get(`439829759304663041`).edit({name: `time is: ${h}:${m} ${suffix}.`});
+            client.channels.get(`439829759304663041`).edit({name: `Time Now is: ${h}:${m} ${suffix}.`});
     },1*1000)
 })
 
