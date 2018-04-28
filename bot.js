@@ -12,7 +12,8 @@ const arraySort = require('array-sort'),
       table = require('table');
 
 client.on('message' , async (message) => {
-    if(message.content.startsWith(prefix + ".topinv")) {
+var prefix = '.';
+    if(message.content.startsWith(prefix + "topinv")) {
 
   let invites = await message.guild.fetchInvites();
 
@@ -455,7 +456,8 @@ if(!message.channel.guild) return;
 });
 
               client.on('message', message => {
-               if (message.content.startsWith(".user")) {
+var prefix = '.';
+               if (message.content.startsWith("user")) {
          var args = message.content.split(" ").slice(1);
          let user = message.mentions.users.first();
          var men = message.mentions.users.first();
