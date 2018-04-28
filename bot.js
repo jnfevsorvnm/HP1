@@ -441,7 +441,7 @@ if(!message.channel.guild) return;
 
 client.on('message', message => { 
         var prefix = ".";  
-  if(message.content.startsWith(prefix + 'id')) { 
+  if(message.content.startsWith(prefix + 'user')) { 
         if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
     if(!message.channel.guild) return;                  
     var moment = require("moment");
