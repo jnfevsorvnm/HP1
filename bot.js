@@ -439,26 +439,24 @@ if(!message.channel.guild) return;
                                });
  
 
-client.on('message', message => { 
-        var prefix = ".";  
-  if(message.content.startsWith(prefix + 'user')) { 
-        if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
-    if(!message.channel.guild) return;                  
+    client.on('message', message => {
+        var prefix = ".";
+    if (message.content === "user") {              
     var moment = require("moment");
- 
-                    let modlog2 = client.channels.find('name', 'chat');
- 
+    
          moment.locale('ar-ly');
          var h = member.user;
-        let heroo = new Discord.RichEmbed()
+         var embed  = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(h.avatarURL)
         .setAuthor(h.username,h.avatarURL)
         .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
          .addField(': تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)      
          .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
-     modlog2.send({embed:heroo});
-});
+         message.channel.sendEmbed(embed)
+    
+        }
+        });
 
         client.on("guildMemberAdd", member => {
     var moment = require("moment");
