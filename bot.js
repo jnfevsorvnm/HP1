@@ -277,9 +277,8 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    var prefix = "+";
+    var prefix = ".";
 if (message.content === "dragon") {
-    if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
 if(!message.channel.guild) return;
 const now = new Date();
 dateFormat(now, '***On dddd, mmmm dS, yyyy, h:MM:ss TT***');
