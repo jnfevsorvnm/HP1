@@ -216,9 +216,9 @@ var embed = new Discord.RichEmbed()
 .setColor("#00ced1")
 .setThumbnail(icon)
 .addField("**أيدي السيرفر**", `***>***__${message.guild.id}__`, true)
-.addField("***تاريخ انشاء السيرفر** <:added:394910274177597491>", `***>***__${dateFormat(message.guild.createdAt)}__`)
+.addField("***تاريخ انشاء السيرفر** <:date:394910274177597491>", `***>***__${dateFormat(message.guild.createdAt)}__`)
 .addField("**موقع السيرفر**", `***>***__${region[message.guild.region]}__`, true)
-.addField("**عدد اعضاء السيرفر** 👥", `***>***__${message.guild.members.filter(m => m.presence.status !== 'Offline').size} **Online** Out Of ${message.guild.memberCount} **Members**__`, true)
+.addField("**عدد اعضاء السيرفر** 👥", `***>***__${message.guild.members.filter(m => m.presence.status !== 'offline').size} **Online** out of ${message.guild.memberCount} **members**__`, true)
 .addField("**صاحب السيرفر** ", `***>***__${owner.username}__`, true)
 .addField("**عدد رومات الكتابة**", `***>***__${message.guild.channels.filter(m => m.type === 'text').size} Text Channels__`, true)
 .addField("**عدد رومات الصوتية**", `***>***__${message.guild.channels.filter(m => m.type === 'voice').size} Voice Channels__`, true)
@@ -227,7 +227,6 @@ var embed = new Discord.RichEmbed()
 message.channel.send({ embed: embed });
 }
 });
-
 client.on("message", message => {
      var prefix = "#";    
 	var args = message.content.split(' ').slice(1); 
