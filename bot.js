@@ -281,7 +281,6 @@ client.on('message', message => {
 if (message.content === "dragon") {
     if (!message.member.hasPermission("ADMINISTRATOR"))  return message.reply("**هذة الأمر للأدارة فقط**");
 if(!message.channel.guild) return;
-const millis = new Date().getTime() - message.guild.createdAt.getTime();
 const now = new Date();
 dateFormat(now, '***On dddd, mmmm dS, yyyy, h:MM:ss TT***');
 
