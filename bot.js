@@ -167,6 +167,7 @@ client.on("message", message => {
 });
 
 
+
 client.on('message', message => {
     var prefix = ".";
    if(message.content.startsWith(prefix + 'server')) {
@@ -214,15 +215,15 @@ var embed = new Discord.RichEmbed()
 .setTitle(`**${message.guild.name}** 👪`)
 .setColor("#00ced1")
 .setThumbnail(icon)
-.addField("**Guild ID**", `***>***__${message.guild.id}__`, true)
-.addField("***Created On** <:added:394910274177597491>", `***>***__${dateFormat(message.guild.createdAt)}__`)
-.addField("**Region**", `***>***__${region[message.guild.region]}__`, true)
-.addField("**User Count** 👥", `***>***__${message.guild.members.filter(m => m.presence.status !== 'offline').size} **Online** out of ${message.guild.memberCount} **members**__`, true)
-.addField("**Owner** ", `***>***__${owner.username}__`, true)
-.addField("**Text Channels Count**", `***>***__${message.guild.channels.filter(m => m.type === 'text').size} Text Channels__ ***(Do "pr!tchannels" to get all the text channels in the server!)***`, true)
-.addField("**Voice Channels Count**", `***>***__${message.guild.channels.filter(m => m.type === 'voice').size} Voice Channels__ ***(Do "pr!vchannels" to get all the voice channels in the server!)***`, true)
-.addField("**Verification Level** 📶", `***>***__${verificationLevels[message.guild.verificationLevel]}__`, true)
-.addField("**Roles Count**", `***>***__${message.guild.roles.size} Roles__ ***(Do "pr!roles" to get all the roles in the server!)***`, true)
+.addField("**أيدي السيرفر**", `***>***__${message.guild.id}__`, true)
+.addField("***تاريخ انشاء السيرفر** <:added:394910274177597491>", `***>***__${dateFormat(message.guild.createdAt)}__`)
+.addField("**موقع السيرفر**", `***>***__${region[message.guild.region]}__`, true)
+.addField("**عدد اعضاء السيرفر** 👥", `***>***__${message.guild.members.filter(m => m.presence.status !== 'Offline').size} **Online** Out Of ${message.guild.memberCount} **Members**__`, true)
+.addField("**صاحب السيرفر** ", `***>***__${owner.username}__`, true)
+.addField("**عدد رومات الكتابة**", `***>***__${message.guild.channels.filter(m => m.type === 'text').size} Text Channels__`, true)
+.addField("**عدد رومات الصوتية**", `***>***__${message.guild.channels.filter(m => m.type === 'voice').size} Voice Channels__`, true)
+.addField("**مســتوى حمــاية الســيرفر** 📶", `***>***__${verificationLevels[message.guild.verificationLevel]}__`, true)
+.addField("**عدد الرتب**", `***>***__${message.guild.roles.size} رتبة__ `, true)
 message.channel.send({ embed: embed });
 }
 });
