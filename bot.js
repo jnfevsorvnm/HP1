@@ -216,7 +216,7 @@ message.channel.send({ embed: embed });
 }
 });
 client.on("message", message => {
-     var prefix = "#";    
+     var prefix = "+";    
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
 	if( !message.guild ) return;
@@ -396,7 +396,7 @@ if(!message.channel.guild) return;
 });
 
               client.on('message', message => {
-var prefix = '.';
+var prefix = '+';
                if (message.content.startsWith("user")) {
          var args = message.content.split(" ").slice(1);
          let user = message.mentions.users.first();
