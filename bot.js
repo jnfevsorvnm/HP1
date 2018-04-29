@@ -169,7 +169,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var prefix = ".";
-if (message.content === "server") {
+   if(message.content.startsWith(prefix + 'server')) {
 if(!message.channel.guild) return;
 const now = new Date();
 dateFormat(now, '***On dddd, mmmm dS, yyyy, h:MM:ss TT***');
