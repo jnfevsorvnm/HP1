@@ -103,13 +103,13 @@ hours = currentTime.getHours() + 3 ,
        .setTitle(`المرسل ${message.author.username}#${message.author.discriminator} `)
         .setDescription(":white_check_mark:  | `محاولة السبام`\n\nالاسم:\n"+`${message.author.username}#${message.author.discriminator}`+"\nالعقوبة:\n  MuteChat / ميوت كتابي\n")
         .setFooter("Anti - Spam")
-        .setColor("c91616")
+        .setColor("#c91616")
       message.channel.send(embed500)
           const embed20 = new Discord.RichEmbed()
         .setTitle(":scales: | تمت معاقبتك")
         .setDescription(`**:small_blue_diamond:لقد قمت بمخالفة قوانين السيرفر**\n \n:gun: : نوع العقوبه\nMuteChat / ميوت كتابي\n:clock1: وقت وتاريخ العقوبه:\n`+ Year + "/" + Month + "/" + Day +', '+hours +'-' +minutes+'-'+seconds+"\n \n \n`في حال كانت العقوبة بالغلط, تواصل مع الادارة`")
             .setFooter("Anti - Spam")
-        .setColor("c91616")
+        .setColor("#c91616")
       
        message.author.send(embed20)
     
