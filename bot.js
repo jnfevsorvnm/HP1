@@ -8,6 +8,7 @@ const fetchVideoInfo = require('youtube-info');
 const fs = require('fs');
 const ms = require("ms");
 const dateFormat = require('dateformat');
+const config = require("./config.json")
 const arraySort = require('array-sort'),
       table = require('table');
 
@@ -850,12 +851,6 @@ message.react("✔")
     }
   });
 
-client.on('message', msg => {
-    if (msg.content === '.inviter') {
-            msg.guild.fetchInvites()
-     .then(invites => msg.reply(`انت جبت   ${invites.find(invite => invite.inviter.id === msg.author.id).uses} عضو لهاذا السيرفر`)) 
-    }
-  });
 
   client.on('ready',  () => {
     console.log('تم تشغيل :dragon  ');
@@ -1103,7 +1098,7 @@ client.on('message', message => {
     
      });
 
-     const prefix = '.';
+     var prefix = '.';
 client.on("message", async message => {
 	if(message.author.bot) return;
     if(message.channel.type === "dm") return;
