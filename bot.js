@@ -142,7 +142,7 @@ client.on('ready', () => {
 })
 
 client.on("message", message => { 
-    var prefix = "+";
+    var prefix = ".";
     var args = message.content.toLowerCase().split(' ').slice(1).join(' ');   
     if ( message.content.toLowerCase().startsWith( prefix + "roles" ) ){
         if( !args ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
@@ -155,7 +155,7 @@ client.on("message", message => {
 });
 
 
-   client.on('message', message => {
+    client.on('message', message => {
         if(!message.channel.guild) return;
         var prefix = ".";
     if(message.content.startsWith(prefix + 'move')) {
@@ -168,16 +168,16 @@ client.on("message", message => {
                          if (message.mentions.members.first().voiceChannel != null) {
                                 var authorchannel = message.member.voiceChannelID;
                                 var usermentioned = message.mentions.members.first().id;
-                                const sucmove = new Discord.RichEmbed()
+                               var embed = new Discord.RichEmbed()
                                   .setTitle("Succes!")
                                   .setColor("#000000")
                                   .setDescription(`لقد قمت بسحب <@${usermentioned}> الى الروم الصوتي الخاص بك:white_check_mark: `)
-                                const youhavebeenmoved = new Discord.RichEmbed()
+                                var embed = new Discord.RichEmbed()
                                   .setTitle(`You are Moved in ${message.guild.name}`)
                                   .setColor("#000000")
                                   .setDescription(`<@${message.author.id}> moved you to his channel!\nServer => ${message.guild.name}`)
-                                message.guild.members.get(usermentioned).setVoiceChannel(authorchannel).then(m => message.channel.send(sucmove))
-                                message.guild.members.get(usermentioned).send(youhavebeenmoved)
+                                                              message.guild.members.get(usermentioned).setVoiceChannel(authorchannel).then(m => message.channel.send(embed))
+                                message.guild.members.get(usermentioned).send(embed)
                          } else {
                                 message.channel.send("``لا تستطيع سحب "+ message.mentions.members.first() +" `يجب ان يكون هذه العضو في روم صوتي`")
                          }
@@ -191,7 +191,7 @@ client.on("message", message => {
         });
 
 
-        client.on("message", async message => {
+         client.on("message", async message => {
             if(!message.channel.guild) return;
             var prefix = ".";
         if(message.content.startsWith(prefix + 'invites')) {
@@ -207,17 +207,17 @@ client.on("message", message => {
             });
           if (nul > 0) {
               console.log(`\n${message.author.tag} has ${nul} invites in ${guild.name}\n`)
-                const invitesembed = new Discord.RichEmbed()
+              var embed = new Discord.RichEmbed()
                   .setColor("#000000")
                     .addField(`${message.author.username}`, `لقد قمت بدعوة **${nul}** شخص`)
-                      message.channel.send(invitesembed)
+                          message.channel.send({ embed: embed });
                       return;
                     } else {
-                      const noinvites = new Discord.RichEmbed()
+                       var embed = new Discord.RichEmbed()
                         .setColor("#000000")
                         .addField(`${message.author.username}`, `لم تقم بدعوة أي شخص لهذة السيرفر`)
 
-                        message.channel.send(noinvites)
+                       message.channel.send({ embed: embed });
                         return;
                     }
         }
@@ -234,16 +234,16 @@ codes.push(`discord.gg/${invite.code}`)
 })
 }).then(m => {
 if (codes.length < 0) {
-const nocodes = new Discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
 .setColor("#000000")
-.addField(`جميع روابط الدعوات الخاصة بسيرفر : ${message.guild.name}`, `You currently don't have any active invites! Please create an invite and start inviting, then you will be able to see your codes here!`)
-message.author.send(nocodes)
+.addField(`Your invite codes in ${message.guild.name}`, `You currently don't have any active invites! Please create an invite and start inviting, then you will be able to see your codes here!`)
+message.author.send({ embed: embed });
 return;
 } else {
-const hascodes = new Discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
 .setColor("#000000")
 .addField(`Your invite codes in ${message.guild.name}`, `Invite Codes:\n${codes.join("\n")}`)
-message.author.send(hascodes)
+message.author.send({ embed: embed });
 return;
 }
 })
