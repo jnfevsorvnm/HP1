@@ -1009,7 +1009,7 @@ client.on('message', message => {
     
      });
 
-     const prefix = '!';
+     const prefix = '.';
 client.on("message", async message => {
 	if(message.author.bot) return;
     if(message.channel.type === "dm") return;
@@ -1041,8 +1041,8 @@ client.on("message", async message => {
 			.setThumbnail("https://i.imgur.com/GnR2unD.png")
 			.addField("اسمك الكامل", `${message.author.username}#${message.author.discriminator}`)
 			.addField("أيدي", message.author.id)
-            .addField(": دخولك لديسكورد قبل", message.author.createdAt)
             .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\``)
+                    .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``)
             .setThumbnail(message.author.avatarURL)
             
 
