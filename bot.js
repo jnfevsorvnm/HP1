@@ -29,12 +29,12 @@ var prefix = '.';
     invites.forEach(i => {
       possibleInvites.push([i.inviter.username , i.uses]);
     })
-    const embed = new Discord.RichEmbed()
+  var embed = new Discord.RichEmbed()
     .setColor(0x7289da)
     .setTitle("دعوات السيرفر")
     .addField(' المتصدرين' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
 
-    message.channel.send(embed)
+   message.channel.send({ embed: embed });
     }
 });
 
