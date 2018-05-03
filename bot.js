@@ -114,11 +114,11 @@ i.forEach(inv =>{
       invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
 
 });
-const top = new Discord.RichEmbed()
+var embed = new Discord.RichEmbed()
 .setColor("#000000")
 .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
 .setThumbnail(message.author.avatarURL)
-message.author.send(top)
+message.channel.send({ embed: embed });
 
 });
 
