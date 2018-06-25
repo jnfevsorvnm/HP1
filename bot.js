@@ -99,7 +99,7 @@ hours = currentTime.getHours() + 3 ,
 
 
 client.on('message',message =>{
-  var prefix = ".";
+  var prefix = "!";
   if(message.content.startsWith(prefix + 'top')) {
 message.guild.fetchInvites().then(i =>{
 var invites = [];
@@ -128,7 +128,7 @@ message.channel.send({ embed: embed });
 
 
 client.on("message", message => { 
-    var prefix = ".";
+    var prefix = "!";
     var args = message.content.toLowerCase().split(' ').slice(1).join(' ');   
     if ( message.content.toLowerCase().startsWith( prefix + "roles" ) ){
         if( !args ) return message.reply('**:x: يرجى وضع أسم الرتبة **');
@@ -141,7 +141,7 @@ client.on("message", message => {
 });
     client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= ".";
+ var prefix= "!";
         if(message.content.startsWith(prefix + 'server2')) {
         let guild = message.guild
         let channel = message.channel
@@ -176,7 +176,7 @@ client.on("message", message => {
 
     client.on('message', message => {
         if(!message.channel.guild) return;
-        var prefix = ".";
+        var prefix = "!";
     if(message.content.startsWith(prefix + 'move')) {
         var cmdrole = message.guild.roles.find("name", config.cmdrole)
            if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -212,7 +212,7 @@ client.on("message", message => {
 
          client.on("message", async message => {
             if(!message.channel.guild) return;
-            var prefix = ".";
+            var prefix = "!";
         if(message.content.startsWith(prefix + 'invites')) {
         var nul = 0
         var guild = message.guild
@@ -271,7 +271,7 @@ return;
 });
 
 client.on('message', message => {
-    var prefix = ".";
+    var prefix = "!";
    if(message.content.startsWith(prefix + 'server')) {
 if(!message.channel.guild) return;
 const now = new Date();
@@ -330,7 +330,7 @@ message.channel.send({ embed: embed });
 }
 });
 client.on("message", message => {
-     var prefix = "+";    
+     var prefix = "!";    
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
 	if( !message.guild ) return;
@@ -378,7 +378,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => { 
-        var prefix = "ا";                     
+        var prefix = "!";                     
 if(!message.channel.guild) return;
    if(message.content.startsWith(prefix + 'لوان')) {
    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -498,40 +498,6 @@ if(!message.channel.guild) return;
 
 
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` ═════════════════════ஜ۩۞۩ஜ═════════════════════ 
-  　 　 　　　                       •● W E L C O M E - T O - H P - C L A N●• 
-  ═════════════════════ஜ۩۞۩ஜ═════════════════════
-  : السلام عليكم ورحمة الله وبركاته.. قوانين جديدة للكلان
-  : أول شي : بالنسبة للشعار تغير
-  : الشعار بإسمك باللعبة 
-  ! ᴴᴾ اسمك
-  : الشعار بإسمك بالدسكورد مب بالسيرفر
-  ! HP اسمك
-  : ملاحظة
-  ! إذا حطيت شعار الدسكورد باللعبة أو شعار اللعبة بالدسكورد أو شعار غير ذولا تنشال رتبتك - 
-  --------------------------------------
-  : ثاني شي : بالنسبة للرتب
-  "إذا تطلب رتبة من أول مرّة تاخذ إنذار من دون نقاش و ع كل مرة فيها تطلب رتبة تاخذ إنذار"
-  "ولتصير عضو أساسي بالكلان لازم تحط بإسمك بالدسكورد الشعار الي فوق بالرسالة، ولازم نختبرك"
-  "وإذا تقول انا خويكك ومن مشتركينك ومدري ايش.. هذا الكلام عليه إنذار مثلك مثل باقي الناس"
-  : ملاحظة
-  إنذار أول، إنذار ثاني، إنذار ثالث؛ تتبند -
-  --------------------------------------
-  : (ثالث شي : السب بشكل عام، أو بشكل خاص (مزح وطقطقة مع خويك
-  "ممنوع السب بغض النظر لو كان مشكلة، أو حتى مع خويك يعني مزح.. المزح بالسب ممنوع"
-  "تبي تسب سبه خاص مثل م تبي بس بالشات العام ممنوع السب"
-  "وإذا تسب بالشات تاخذ ميوت كتابي وإنذار"
-  : ملاحظة
-  إذا تقول لأحد من الإدارة تفك عنك الميوت بتبلع إنذار -
-  -------------------------------------
-  ..وبس هذي القوانين الجديدة .. الرجاء من كل من في السيرفر أن يتقيد بها وخاصةً الأصدقاء.
-  - سيتم التعديل على بعض الرتب والرومات.. ونتمنى لكم التوفيق. 
-   طاقم الإدارة ~
-    ${member} `) 
-}).catch(console.error)
-})
 
  
 
@@ -542,7 +508,7 @@ const discord_token = process.env.BOT_TOKEN;
 client.login(discord_token);
 client.on('ready', function() {
 	console.log(`i am ready ${client.user.username}`);
-    client.user.setGame(prefix + 'مساعدة || Moha');
+    client.user.setGame(prefix + 'مساعدة || LEGEND');
 });
 /*
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -577,7 +543,7 @@ var download = function(uri, filename, callback) {
 };
 
 client.on('message', function(message) {
-var prefix = ".";
+var prefix = "!";
 	const member = message.member;
 	const mess = message.content.toLowerCase();
 	const args = message.content.split(' ').slice(1).join(' ');
@@ -761,7 +727,7 @@ function isYoutube(str) {
 	return str.toLowerCase().indexOf('youtube.com') > -1;
 }
  client.on('message', message => {
-var prefix = ".";
+var prefix = "!";
      if (message.content === prefix +"مساعدة") {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
@@ -785,22 +751,22 @@ var prefix = ".";
 	 prefix = ${prefix}
 	 ping = ${Date.now() - message.createdTimestamp}ms
 	 for help = <@!2344543680726302839> 
-	 By Moha	 `)
+	 By LEGEND	 `)
 
       message.channel.send({embed});
 	 }
 	});
 
 client.on('message', message => {
-var prefix = "#";
+var prefix = "!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == 410835593451405312)
+  if (message.author.id == 354653862533136387)
 return;
 if (message.content.startsWith(prefix + 'dnd')) {
-  if (message.author.id !== '234454368072630283') return message.react('⚠')
+  if (message.author.id !== '354653862533136387') return message.react('⚠')
 client.user.setStatus('dnd');  
 message.react("✅")
 }
@@ -809,17 +775,17 @@ message.react("✅")
 
 
 client.on('message', message => {
-var prefix = "#";
+var prefix = "!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == 410835593451405312)
+  if (message.author.id == 354653862533136387)
 return;
 
 
 if (message.content.startsWith(prefix + 'online')) {
-  if (message.author.id !== '234454368072630283') return message.react('⚠')
+  if (message.author.id !== '354653862533136387') return message.react('⚠')
   client.user.setStatus('online');  
 message.react("✅")
 }
@@ -828,7 +794,7 @@ message.react("✅")
 
 
 client.on('message', message => {
-var prefix = "#";
+var prefix = "!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
@@ -836,7 +802,7 @@ var prefix = "#";
   if (message.author.id == 428733432731009024)
 return;
 if (message.content.startsWith(prefix + 'idle')) {
-   if (message.author.id !== '234454368072630283') return message.react('⚠')
+   if (message.author.id !== '354653862533136387') return message.react('⚠')
 client.user.setStatus('idle');  
 message.react("✅")
 }
@@ -845,17 +811,17 @@ message.react("✅")
 
 
 client.on('message', message => {
-var prefix = "#";
+var prefix = "!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == 428733432731009024)
+  if (message.author.id == 354653862533136387)
 return;
 
 
 if (message.content.startsWith(prefix + 'offline')) {
-    if (message.author.id !== '234454368072630283') return message.react('⚠')
+    if (message.author.id !== '354653862533136387') return message.react('⚠')
 client.user.setStatus('invisible');  
 message.react("✔")
 }
@@ -873,7 +839,7 @@ message.react("✔")
 
 
   client.on('ready',  () => {
-    console.log('تم تشغيل :dragon  ');
+    console.log('تم تشغيل : SUPER ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -882,7 +848,7 @@ message.react("✔")
 
  
  client.on("message", message => {
-    var prefix = ".";
+    var prefix = "!";
     const command = message.content.split(" ")[0];
 
     if(command == prefix+"voicekick"){
@@ -917,7 +883,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "HP ( Horrifying Players )")
+        guild = client.guilds.find("name", "→ ؎ƊƦӃ♛CLAN")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -937,7 +903,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "HP ( Horrifying Players )")
+        guild = client.guilds.find("name", "→ ؎ƊƦӃ♛CLAN")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -955,7 +921,7 @@ client.on("guildMemberAdd", (member) => {
 });
 let points = JSON.parse(fs.readFileSync('./fkk/3wasmPTS.json', 'utf8'));
      
-var prefix = ".";
+var prefix = "!";
 
 client.on('message', message => {
 if (!points[message.author.id]) points[message.author.id] = {
@@ -1075,7 +1041,7 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
 });
 
 client.on('message', message => {
-    var prefix = ".";
+    var prefix = "!";
     
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
@@ -1084,41 +1050,41 @@ client.on('message', message => {
     
     
     if (message.content.startsWith(prefix + 'playing')) {
-    if (message.author.id !== '234454368072630283') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '354653862533136387') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
     } else
     
      
     if (message.content.startsWith(prefix + 'streem')) {
-    if (message.author.id !== '234454368072630283') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-    client.user.setGame(argresult, "http://twitch.tv/HP");
+    if (message.author.id !== '354653862533136387') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    client.user.setGame(argresult, "https://discord.gg/BW6runb");
         message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
     } else
     
     if (message.content.startsWith(prefix + 'setname')) {
-    if (message.author.id !== '234454368072630283') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '354653862533136387') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
       client.user.setUsername(argresult).then
           message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
       return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
     } else
         
     if (message.content.startsWith(prefix + 'setavatar')) {
-    if (message.author.id !== '234454368072630283') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '354653862533136387') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setAvatar(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
     } else
     
     
     if (message.content.startsWith(prefix + 'watching')) {
-    if (message.author.id !== '234454368072630283') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '354653862533136387') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
         client.user.setActivity(argresult, {type : 'watching'});
      message.channel.sendMessage(`**${argresult}** : تم تغيير الووتشينق الى`)
     }
     
      });
   client.on("message", async message => {
-    var prefix = '.';
+    var prefix = '!';
     if(message.author.bot) return;
       if(message.channel.type === "dm") return;
       let user = message.mentions.users.first();
@@ -1356,7 +1322,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
 
 
 client.on('message', message => {
-    var prefix = ".";
+    var prefix = "!";
     if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -1399,7 +1365,7 @@ msg.delete();
 }
 });
 client.on('message' , message => {
-  var prefix = ".";
+  var prefix = "!";
   if(message.author.bot) return;
 
   if(message.content.startsWith(prefix + "bcrole")) {
@@ -1450,7 +1416,7 @@ client.on('message' , message => {
 
 
 client.on("message", message => {
-    var prefix = ".";
+    var prefix = "!";
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -1469,7 +1435,7 @@ client.on("message", message => {
   });
 
 client.on('message', message => {
-        var prefix = ".";
+        var prefix = "!";
     if (message.content.split(' ')[0] == 'bcall')
        message.guild.members.forEach( member => {
          if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**هذة الأمر للأدارة فقط**').then(m => m.delete(5000));
@@ -1482,7 +1448,7 @@ client.on('message', message => {
             
                                                   });
    client.on("message", message => {
-       var prefix = "#";
+       var prefix = "!";
  
              var args = message.content.substring(prefix.length).split(" ");
                 if (message.content.startsWith(prefix + "k")) {
@@ -1509,7 +1475,7 @@ client.on('message', message => {
 });
 
 client.on("message", message => {
-    var prefix = ".";
+    var prefix = "!";
    if (message.content.startsWith(prefix + "bconline")) {
                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 let args = message.content.split(" ").slice(1);
@@ -1523,7 +1489,7 @@ message.delete();
 });
 
 client.on('message', async message =>{
-  var prefix = "+";
+  var prefix = "!";
   if(message.content.startsWith(prefix + 'fkk')) {
 if (message.author.omar) return;
 if (fkkRecently.has(message.author.id)) {
