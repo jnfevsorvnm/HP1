@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const LOka = new Discord.Client();
-console.log('By LEGEND-YT');
+console.log('By KBOOOOOOOOSH-YT');
 LOka.on('ready', () => {
   console.log(`Logged in as ${LOka.user.tag} !`);
  
@@ -8,12 +8,11 @@ LOka.on('ready', () => {
 LOka.on('ready',  () => {
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-console.log('      ~            ~  By : LEGND-YT ~           ~    ');
+console.log('      ~            ~  By : KBOOOOOOOOSH-YT ~           ~    ');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-console.log(`Logged in as  * [ "  LEGEND-YT " ] servers! [ " ${LOka.guilds.size} " ] Users! [ " ${LOka.users.size} " ]`);
+console.log(`Logged in as  * [ "  KBOOOOOOOOSH-YT " ] servers! [ " ${LOka.guilds.size} " ] Users! [ " ${LOka.users.size} " ]`);
  
-       
    
  
 });
